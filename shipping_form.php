@@ -73,18 +73,18 @@ if(!isset($zip_code)){
     <br>
 
     <label>Shipping Company: </label>
-    <input type="radio"  id= "USPS" name="shipping_company" value="<?php echo htmlspecialchars($shipping_company); ?>">
+    <input type="radio"  id= "USPS" name="shipping_company" value= "USPS"> <!-- id has to match Value-->
     <label for = "USPS">  USPS </label>
-    <input type="radio"  id= "UPS" name="shipping_company" value="<?php echo htmlspecialchars($shipping_company); ?>">
+    <input type="radio"  id= "UPS" name="shipping_company" value="UPS">
     <label for = "UPS" > UPS </label>
-    <input type="radio"  id= "FedEx" name="shipping_company" value="<?php echo htmlspecialchars($shipping_company); ?>">
+    <input type="radio"  id= "FedEx" name="shipping_company" value="FedEx">
     <label for = "FedEx" > FedEx </label>
     <br>
 
     <label>Shipping Class:</label>
-    <input type="radio" id= "Next Day Air" name= "shipping_class" value="<?php echo htmlspecialchars($shipping_class); ?>">
+    <input type="radio" id= "Next Day Air" name= "shipping_class" value="Next Day Air">
     <label for = "Next Day Air" > Next Day Air </label>
-    <input type="radio" id= "Priority Mail" name= "shipping_class" value="<?php echo htmlspecialchars($shipping_class); ?>">
+    <input type="radio" id= "Priority Mail" name= "shipping_class" value="Priority Mail">
     <label for = "Priority Mail" >Priority Mail</label>
     
     <br>

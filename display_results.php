@@ -54,11 +54,13 @@ $company_addressf =  $company_address;
 $namef = $first_name . " " . $last_name;
 $user_addressf = $user_address . " <br> <b> UNITED STATES </b>"; // United States is in a new line and its bold
 $statef = $state;
-$datef = date_format(date_create($shipping_date),'Y-m-d');
+$datef = date_format(date_create($shipping_date),'m-d-Y');
+$zip_codef =$zip_code;
 $total_valuef = "$" . number_format($total_value);
 $package_dimensionf = number_format($package_dimension) . " inches";
-
-
+$tracking_numberf = $tracking_number;
+$shipping_classf = $shipping_class;
+$shipping_companyf = $shipping_company;
 
 
 ?>
@@ -79,16 +81,32 @@ $package_dimensionf = number_format($package_dimension) . " inches";
     <br>
     <span><?php echo $user_addressf;?></span>
     <br>
+    <span><?php echo $zip_codef;?></span>
+    <br>
     <h3><span> <?php echo $statef;?></span><h3>
+    <br>
+    <span><?php echo $datef;?></span>   
+    <br>
+    <span><?php echo $tracking_numberf;?></span>
+    <br>
+    <h4><label>Size:</label></h4>
+    <span><?php echo $package_dimensionf; ?></span>
+    <br>
+    <h3><span><?php echo $shipping_classf;?></span></h3>
+    <br> 
+    <h3><span><?php echo $shipping_companyf;?></span></h3>
+    <br>098
+    <h5><label>Total Value:</label></h5>
+    <span><?php echo $total_valuef; ?></span>
+    <br>
 
-  <label>Total Value:</label>
-  <span><?php echo $total_valuef; ?></span>
-  <br>
-  <label>Size:</label>
-  <span><?php echo $package_dimensionf; ?></span>
-  <br>
- 
 
+
+
+
+
+
+  
   
   
 
