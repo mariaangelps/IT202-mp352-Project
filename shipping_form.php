@@ -34,8 +34,8 @@ if(!isset($first_name)){
 if(!isset($last_name)){
   $last_name='';
 }
-if(!isset($street_address)){
-  $street_address='';
+if(!isset($user_address)){
+  $user_address='';
 }
 if(!isset($city)){
   $city='';
@@ -98,7 +98,11 @@ if(!isset($zip_code)){
     <br>
 
     <label>Company Address:</label>
-    <input type="text" name="company_address" value="<?php echo htmlspecialchars($company_address); ?>">
+    <select id="company_address" name="company_address">
+      <option value= "4585 Whittier Blvd, East Los Angeles, CA 90022 ">4585 Whittier Blvd<br>
+      East Los Angeles, CA 90022 
+      </option>
+    </select>
     <br>
 
     <label>User Address:</label>

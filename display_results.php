@@ -50,10 +50,15 @@ if($total_value===FALSE){
   
 //MAKE THE TAG
 //Apply formatting 
-$total_valuef = "$" . number_format($total_value,2);
+$company_addressf =  $company_address;
+$namef = $first_name . " " . $last_name;
+$user_addressf = $user_address . " <br> <b> UNITED STATES </b>"; // United States is in a new line and its bold
+$statef = $state;
+$datef = date_format(date_create($shipping_date),'Y-m-d');
+$total_valuef = "$" . number_format($total_value);
 $package_dimensionf = number_format($package_dimension) . " inches";
-$datef: = date_format($shipping_date);
-$
+
+
 
 
 ?>
@@ -63,7 +68,18 @@ $
   <title>Shipping Tag</title>
 </head>
 <body>
-  <h1>SHIPPING TAG DETAILS</h1>
+  <h1>SHIPPING TAG DETAILS:</h1>
+  
+  <span><?php echo $company_addressf;?></span>
+  <br>
+  <p>852 3028 3732 </p>
+
+  <h3> SHIP TO: </h3>
+    <span><?php echo $namef;?></span>
+    <br>
+    <span><?php echo $user_addressf;?></span>
+    <br>
+    <h3><span> <?php echo $statef;?></span><h3>
 
   <label>Total Value:</label>
   <span><?php echo $total_valuef; ?></span>
@@ -71,8 +87,9 @@ $
   <label>Size:</label>
   <span><?php echo $package_dimensionf; ?></span>
   <br>
-  <label> Date: </label>
-  <span> <?php echo $
+ 
+
+  
   
 
 
