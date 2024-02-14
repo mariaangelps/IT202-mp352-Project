@@ -71,7 +71,7 @@ $shipping_companyf = "<br> <b> Company: </b> " . $shipping_company ;
 </head>
 
 <body>
-<img id="jumping-man" src="full-shot-man-jumping-outdoors.jpg" alt="Man jumping" width="100">
+<img id="jumping-man" src="images/full-shot-man-jumping-outdoors.jpg" alt="Man jumping" width="100">
     <?php include ('header.php');?>
    
     <main>

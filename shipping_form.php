@@ -176,6 +176,8 @@ if(!isset($zip_code)){
     <input type= "text" name= "zip_code" value= "<?php echo htmlspecialchars($zip_code);?>">
     <br>
     <input type="submit" value="Send">
+
 </form>
 </body>
 </html>
+
