@@ -1,0 +1,58 @@
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url('front-view-paper-clip-with-copy-space.jpg.jpeg');
+    padding-left: 12px;
+    height: 100vh;
+    background-size: contain;
+    
+}
+
+
+header{
+    padding: 4px; /* Add padding to header*/
+    text-align: center;
+}
+main{
+    padding: 4px;
+}
+
+
+footer {
+    padding: 0px;
+    position:relative; /* Necessary for absolute positioning of the image */
+    margin-left: 0px;
+}
+
+main {
+    position: relative;
+    border: 5px dashed; 
+    width: 400px;
+    margin: 20px auto; /* Center the main content */
+    padding: 8px;
+    color:black;
+    margin-left: 0px;
+    
+}
+
+ .value{
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: 18px;
+}
+.package{
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+}
+
+#jumping-man{
+    float: right;
+    margin-left: 10px; 
+    margin-top: 20px; 
+    margin-right :30px;
+    margin-bottom: 750px;
+}

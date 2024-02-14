@@ -5,7 +5,6 @@
 //company features
 
 $error_message  ='';
-$tracking_number = filter_input(INPUT_POST, 'tracking_number');
 $shipping_class = filter_input(INPUT_POST, 'shipping_class');
 $shipping_company = filter_input(INPUT_POST, 'shipping_company');
 $shipping_date = filter_input(INPUT_POST, 'shipping_date');
@@ -13,6 +12,7 @@ $package_dimension = filter_input(INPUT_POST, 'package_dimension', FILTER_VALIDA
 $total_value = filter_input(INPUT_POST, 'total_value', FILTER_VALIDATE_FLOAT);
 $company_address = filter_input(INPUT_POST, 'company_address');
 $user_address = filter_input(INPUT_POST, 'user_address');
+
 
 //user information
 $first_name = filter_input(INPUT_POST,'first_name');
@@ -52,15 +52,14 @@ if($total_value===FALSE){
 //Apply formatting 
 $company_addressf =  $company_address;
 $namef = $first_name . " " . $last_name;
-$user_addressf = $user_address . " <br> <b> UNITED STATES </b>"; // United States is in a new line and its bold
+$user_addressf = $user_address . "<br> <b> UNITED STATES </b>"; // United States is in a new line and its bold
 $statef = $state;
-$datef = date_format(date_create($shipping_date),'m-d-Y');
-$zip_codef =$zip_code;
-$total_valuef = "$" . number_format($total_value);
-$package_dimensionf = number_format($package_dimension) . " inches";
-$tracking_numberf = $tracking_number;
-$shipping_classf = $shipping_class;
-$shipping_companyf = $shipping_company;
+$datef = "<b>Shipping Date: </b> " . date_format(date_create($shipping_date),'m-d-Y');
+$zip_codef =$zip_code . ", " . "<b> $statef </b>";
+$total_valuef = "<br> <b> Total: </b> " . "$" . floatval($total_value);
+$package_dimensionf = "<br> <b> Size: </b> ". number_format($package_dimension) . " inches";
+$shipping_classf = "<br> <b> Class Type: </b> ". $shipping_class ;
+$shipping_companyf = "<br> <b> Company: </b> " . $shipping_company ;
 
 
 ?>
@@ -68,51 +67,48 @@ $shipping_companyf = $shipping_company;
 <html>
 <head>
   <title>Shipping Tag</title>
+  <link rel="stylesheet" href="result_aesthetic.css"/>
 </head>
+
 <body>
-  <h1>SHIPPING TAG DETAILS:</h1>
-  
-  <span><?php echo $company_addressf;?></span>
-  <br>
-  <p>852 3028 3732 </p>
+<img id="jumping-man" src="full-shot-man-jumping-outdoors.jpg" alt="Man jumping" width="100">
+    <?php include ('header.php');?>
+   
+    <main>
+        
+        <span><?php echo $company_addressf;?><br> 852 3028 3732 </span>
 
-  <h3> SHIP TO: </h3>
-    <span><?php echo $namef;?></span>
-    <br>
-    <span><?php echo $user_addressf;?></span>
-    <br>
-    <span><?php echo $zip_codef;?></span>
-    <br>
-    <h3><span> <?php echo $statef;?></span><h3>
-    <br>
-    <span><?php echo $datef;?></span>   
-    <br>
-    <span><?php echo $tracking_numberf;?></span>
-    <br>
-    <h4><label>Size:</label></h4>
-    <span><?php echo $package_dimensionf; ?></span>
-    <br>
-    <h3><span><?php echo $shipping_classf;?></span></h3>
-    <br> 
-    <h3><span><?php echo $shipping_companyf;?></span></h3>
-    <br>098
-    <h5><label>Total Value:</label></h5>
-    <span><?php echo $total_valuef; ?></span>
-    <br>
-
+            <h2> SHIP TO: </h2>
+            <span><?php echo $namef;?></span>
+            <br>
+            <span><?php echo $user_addressf;?></span>
+            <br>
+            <span><?php echo $zip_codef;?></span>
+            <br>
+            <span><?php echo $datef;?></span>   
+            <br>
+            <span><?php echo $shipping_classf;?></span>
+            <span><?php echo $shipping_companyf;?></span>
+            <br>
+            <span class = "package" ><?php echo $package_dimensionf; ?></span>
+            <br>
+            <span class = "value" ><?php echo $total_valuef; ?></span>
+            <br>
+            <img src = "Beige and Brown Running.jpg" alt = "Running Shoes Bar Code" width= "250"; >
+           
+    </main>
+   
+    <?php include ('footer.php');?>
 
 
 
 
 
-  
-  
-  
 
 
   
   
  
  
-  </body>
+</body>
 </html>

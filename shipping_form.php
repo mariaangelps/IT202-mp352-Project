@@ -10,9 +10,6 @@ if(!isset($package_dimension)){
 if(!isset($total_value)){
   $total_value='';
 }
-if(!isset($tracking_number)){
-  $tracking_number='';
-}
 
 if(!isset($shipping_class)){
   $shipping_class='';
@@ -44,6 +41,7 @@ if(!isset($zip_code)){
   $zip_code='';
 }
 
+
   ?>
 
 <html>
@@ -63,10 +61,6 @@ if(!isset($zip_code)){
 
 <form action="display_results.php" method="post">
     
-    <label>Tracking Number:</label>
-    <input type="text" name="tracking_number" value="<?php echo htmlspecialchars($tracking_number); ?>">
-    <br>
-
     <label>Shipping Date:</label>
     <input type="date" id= "date" name="shipping_date" value="<?php echo htmlspecialchars($shipping_date); ?>">
     <label for="date"> </label>
