@@ -2,7 +2,7 @@ body {
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
     font-family: 'Courier New', Courier, monospace;
-    background-image: url('front-view-paper-clip-with-copy-space.jpg.jpeg');
+    background-image: url('images/front-view-paper-clip-with-copy-space.jpg.jpeg');
     padding-left: 12px;
     height: 100vh;
     background-size: contain;

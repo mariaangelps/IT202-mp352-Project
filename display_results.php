@@ -22,6 +22,7 @@ $state = filter_input(INPUT_POST,'state');
 $zip_code = filter_input(INPUT_POST,'zip_code'); 
 
 //Check the value of the package is no more than 1000
+
 if($total_value===FALSE){
     $error_message.= "Enter a valid number for your value";}
     else if ($total_value>1000){
@@ -94,20 +95,11 @@ $shipping_companyf = "<br> <b> Company: </b> " . $shipping_company ;
             <br>
             <span class = "value" ><?php echo $total_valuef; ?></span>
             <br>
-            <img src = "Beige and Brown Running.jpg" alt = "Running Shoes Bar Code" width= "250"; >
+            <img src = "images/Beige and Brown Running.jpg" alt = "Running Shoes Bar Code" width= "250";>
            
     </main>
-   
+
     <?php include ('footer.php');?>
-
-
-
-
-
-
-
-  
-  
  
  
 </body>

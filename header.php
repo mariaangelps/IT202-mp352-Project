@@ -1,6 +1,6 @@
 <header>
    <nav>
-    <a href="/home.php/"> HOME </a> ||
+    <a href="/home.php/"> hola </a> ||
    
 </nav>
 </header>

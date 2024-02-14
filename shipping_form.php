@@ -40,8 +40,6 @@ if(!isset($city)){
 if(!isset($zip_code)){
   $zip_code='';
 }
-
-
   ?>
 
 <html>
@@ -52,14 +50,13 @@ if(!isset($zip_code)){
   <h1>MY SHIPPING ORDER DETAILS:</h1>
 
   <?php
-
   //Display the error message if it's not empty
   if (!empty($error_message)) {
     echo "<div style='color: red;'>$error_message</div>";
   }
   ?>
 
-<form action="display_results.php" method="post">
+  <form action="display_results.php" method="post">
     
     <label>Shipping Date:</label>
     <input type="date" id= "date" name="shipping_date" value="<?php echo htmlspecialchars($shipping_date); ?>">
@@ -106,11 +103,10 @@ if(!isset($zip_code)){
     <label> First Name: </label>
     <input type= "text" name= "first_name" value= "<?php echo htmlspecialchars($first_name);?>">
     <br>
-
+    
     <label> Last Name:</label>
     <input type= "text" name= "last_name" value= "<?php echo htmlspecialchars($last_name);?>">
     <br>
-
     <label> City: </label>
     <input type= "text" name= "city" value= "<?php echo htmlspecialchars($city);?>">
     <br>
@@ -171,13 +167,10 @@ if(!isset($zip_code)){
       <option value="WY">Wyoming</option>
     </select>
     <br>
-
     <label> Zip Code:</label>
     <input type= "text" name= "zip_code" value= "<?php echo htmlspecialchars($zip_code);?>">
     <br>
     <input type="submit" value="Send">
-
 </form>
 </body>
 </html>
-

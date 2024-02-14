@@ -1,19 +1,14 @@
 <?php
 
-echo "hhola"
+echo "bhola"
 
 
 ?>
 
 <html>
-   <head>
-   <title> MP's SHOES </title>
-   </head>
-   <body>
-   <img src = "images/scene-with-minimal-podiums-3d.jpg" alt = "podium product" >
+<img src = "images/scene-with-minimal-podiums-3d.jpg" alt = "podium product" >
+<nav>
+<h3><a href="shipping_form.php">SHIPPING FORM</a></h3>
 
-   <h3> <link rel="stylesheet" href="result_aesthetic.css"/></h3>
-   <?php include ('header.php');?>
-   <body>
-</html>
+</nav>
 
