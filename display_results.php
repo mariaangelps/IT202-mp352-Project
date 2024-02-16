@@ -62,7 +62,6 @@ $package_dimensionf = "<br> <b> Size: </b> ". number_format($package_dimension) 
 $shipping_classf = "<br> <b> Class Type: </b> ". $shipping_class ;
 $shipping_companyf = "<br> <b> Company: </b> " . $shipping_company ;
 
-
 ?>
 
 <html>

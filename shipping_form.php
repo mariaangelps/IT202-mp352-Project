@@ -40,12 +40,14 @@ if(!isset($city)){
 if(!isset($zip_code)){
   $zip_code='';
 }
+$total_value = filter_input(INPUT_POST, 'total_value', FILTER_VALIDATE_FLOAT);
+  
   ?>
 
 <html>
 <head>
     <title>MY SHIPPING ORDER DETAILS:</title>
-  
+    <link rel="stylesheet" href="style_shipping.css"/>
     <?php include ('header.php');?>
 </head>
 <body>
@@ -58,62 +60,54 @@ if(!isset($zip_code)){
   ?>
 
 
+  <main>
+    <form action="display_results.php" method="post">
   
-  <form action="display_results.php" method="post">
-    
-  
-  
-    <label>Shipping Date:</label>
-    <input type="date" id= "date" name="shipping_date" value="<?php echo htmlspecialchars($shipping_date); ?>">
-    <label for="date"> </label>
-    <br>
+      <label>Shipping Date:</label>
+      <input type="date" id= "date" name="shipping_date" class="input-field" value="<?php echo htmlspecialchars($shipping_date); ?>">
+      <label for="date"> </label>
+      <br>
 
-    <label>Shipping Company: </label>
-    <input type="radio"  id= "USPS" name="shipping_company" value= "USPS"> <!-- id has to match Value-->
-    <label for = "USPS">  USPS </label>
-    <input type="radio"  id= "UPS" name="shipping_company" value="UPS">
-    <label for = "UPS" > UPS </label>
-    <input type="radio"  id= "FedEx" name="shipping_company" value="FedEx">
-    <label for = "FedEx" > FedEx </label>
-    <br>
+      <label>Shipping Company: </label>
+      <input type="radio"  id= "USPS" name="shipping_company" value= "USPS" class="input-field"> <!-- id has to match Value-->
+      <label for = "USPS">  USPS </label>
+      <input type="radio"  id= "UPS" name="shipping_company" value="UPS" class="input-field">
+      <label for = "UPS" > UPS </label>
+      <input type="radio"  id= "FedEx" name="shipping_company" value="FedEx" class="input-field">
+      <label for = "FedEx" > FedEx </label>
+      <br>
 
-    <label>Shipping Class:</label>
-    <input type="radio" id= "Next Day Air" name= "shipping_class" value="Next Day Air">
-    <label for = "Next Day Air" > Next Day Air </label>
-    <input type="radio" id= "Priority Mail" name= "shipping_class" value="Priority Mail">
-    <label for = "Priority Mail" >Priority Mail</label>
-    
-    <br>
+      <label>Shipping Class:</label>
+      <input type="radio" id= "Next Day Air" name= "shipping_class" value="Next Day Air" class="input-field">
+      <label for = "Next Day Air" > Next Day Air </label>
+      <input type="radio" id= "Priority Mail" name= "shipping_class" value="Priority Mail" class="input-field">
+      <label for = "Priority Mail" >Priority Mail</label>
+      
+      <br>
 
-    <label>Package Dimension:</label>
-    <input type="text" name="package_dimension"  value="<?php echo htmlspecialchars($package_dimension); ?>">
-    <br>
+      <label>Package Dimension:</label>
+      <input type="text" name="package_dimension" class="input-field" value="<?php echo htmlspecialchars($package_dimension); ?>">
+      <br>
 
-    <label>Total Value:</label>
-    <input type="text" name="total_value" value="<?php echo htmlspecialchars($total_value); ?>">
-    <br>
+      <label>Total Value:</label>
+      <input type="text" name="total_value" class="input-field" value="<?php echo htmlspecialchars($total_value); ?>">
+      <br>
 
-    <label>Company Address:</label>
-    <select id="company_address" name="company_address">
-      <option value= "4585 Whittier Blvd, East Los Angeles, CA 90022 ">4585 Whittier Blvd<br>
-      East Los Angeles, CA 90022 
-      </option>
-    </select>
-    <br>
 
   
     <input type="text" name="user_address" placeholder="Enter your address" value="<?php echo htmlspecialchars($user_address); ?>" class="input-field" >
     <br>
 
    
-    <input type= "text" name= "first_name" placeholder="First Name"value= "<?php echo htmlspecialchars($first_name);?>">
+    <input type= "text" name= "first_name" placeholder="First Name" class="input-field" value= "<?php echo htmlspecialchars($first_name);?>">
     <br>
     
-    <label> Last Name:</label>
-    <input type= "text" name= "last_name" value= "<?php echo htmlspecialchars($last_name);?>">
+    
+    <input type= "text" name= "last_name" class="input-field" placeholder="Last Name" value= "<?php echo htmlspecialchars($last_name);?>">
     <br>
-    <label> City: </label>
-    <input type= "text" name= "city" value= "<?php echo htmlspecialchars($city);?>">
+    
+
+    <input type= "text" name= "city" class="input-field"  placeholder=" City " value= "<?php echo htmlspecialchars($city);?>">
     <br>
     
     <label> State: </label> 
@@ -172,48 +166,28 @@ if(!isset($zip_code)){
       <option value="WY">Wyoming</option>
     </select>
     <br>
-    <label> Zip Code:</label>
-    <input type= "text" name= "zip_code" value= "<?php echo htmlspecialchars($zip_code);?>">
+    
     <br>
+    <input type= "text" name= "zip_code" placeholder="Zip Code" class="input-field" value= "<?php echo htmlspecialchars($zip_code);?>">
+    <br>
+
+    <label>Company Address:</label>
+      <select id="company_address" name="company_address">
+        <option value= "4585 Whittier Blvd, East Los Angeles, CA 90022 ">4585 Whittier Blvd<br>
+        East Los Angeles, CA 90022 
+        </option>
+      </select>
+      <br>
+
     <input type="submit" value="Send">
 </form>
+</main>
 
 
-<!--Styling shipping form-->
-
-<style>
-
-body {
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    background-image: url('images/parcels-box-cardboard-boxes-smartphone-online-delivery-transportation-logistics-concept-pink-background-3d-rendering-illustration.jpg');
-    padding-left: 25px;
-
-    background-size: 1500; /* Make the background image cover the entire body */
-    background-position: center top; /* Center the background image vertically and align it to the bottom */
-    background-repeat: no-repeat; /* Prevent the background image from repeating */
-    background-attachment: fixed;
-    
-    margin: 0; /* Remove default margin */
-    padding: 4; /* Remove default padding */
-    font-family: Arial;
-    font-style: normal;
-    font-size: 20px;
-}
-
-.input-field {
-    /* Estilo para los campos de entrada, ajusta según tus preferencias */
-    width: 34%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-bottom: 16px;
-    font-size: 14px;
-  }
 
 
-</style>
+
+
 
 </body>
 </html>

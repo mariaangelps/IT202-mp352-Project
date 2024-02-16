@@ -1,20 +1,17 @@
 <?php include ('header.php');?>
 
 <style>
-    body {
-       
-        margin: 0;
-        padding: 0;
-        background-image: url("images/MP KICKS.jpg"); /* Set the background image */
-        background-size: cover; /* Cover the entire background */
-        background-position: center; /* Center the background image */
-        background-repeat: no-repeat; /* Do not repeat the background image */
+    body{
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-image: url('images/este.jpg');
+    padding-left: 25px;
+    background-color: #F3CBCC;
+    background-size: 100%; /* Make the background image cover the entire body */
+    background-repeat: no-repeat;
+    margin-bottom:0;
     }
 
-    /* Ensure the body takes the full viewport height */
-    html, body {
-        height: 100%;
-    }
 </style>
 
 <html>
@@ -22,8 +19,11 @@
     <title>MP KICKS</title>
 </head>
 <body>
-    <!-- Rest of your content here -->
+<main>
 
-    <?php include ('footer.php');?>
+</main>
+<?php include ('footer.php');?>
+    
 </body>
+
 </html>
