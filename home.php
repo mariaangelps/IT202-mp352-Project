@@ -1,14 +1,29 @@
-<?php
+<?php include ('header.php');?>
 
-echo "bhola"
+<style>
+    body {
+       
+        margin: 0;
+        padding: 0;
+        background-image: url("images/MP KICKS.jpg"); /* Set the background image */
+        background-size: cover; /* Cover the entire background */
+        background-position: center; /* Center the background image */
+        background-repeat: no-repeat; /* Do not repeat the background image */
+    }
 
-
-?>
+    /* Ensure the body takes the full viewport height */
+    html, body {
+        height: 100%;
+    }
+</style>
 
 <html>
-<img src = "images/scene-with-minimal-podiums-3d.jpg" alt = "podium product" >
-<nav>
-<h3><a href="shipping_form.php">SHIPPING FORM</a></h3>
+<head>
+    <title>MP KICKS</title>
+</head>
+<body>
+    <!-- Rest of your content here -->
 
-</nav>
-
+    <?php include ('footer.php');?>
+</body>
+</html>

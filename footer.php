@@ -1,11 +1,12 @@
 
   <style>
   h5{
-    color: black;
-    padding: 0px;
-    margin: 0; /* Remove default margin */
+    color: blue;
+  
+    
     }  
     </style>
+
     <footer>
         <h5>
             <nav>

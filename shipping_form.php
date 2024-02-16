@@ -45,10 +45,11 @@ if(!isset($zip_code)){
 <html>
 <head>
     <title>MY SHIPPING ORDER DETAILS:</title>
+  
+    <?php include ('header.php');?>
 </head>
 <body>
-  <h1>MY SHIPPING ORDER DETAILS:</h1>
-
+  <h5>Check out <h5>
   <?php
   //Display the error message if it's not empty
   if (!empty($error_message)) {
@@ -56,8 +57,12 @@ if(!isset($zip_code)){
   }
   ?>
 
+
+  
   <form action="display_results.php" method="post">
     
+  
+  
     <label>Shipping Date:</label>
     <input type="date" id= "date" name="shipping_date" value="<?php echo htmlspecialchars($shipping_date); ?>">
     <label for="date"> </label>
@@ -81,7 +86,7 @@ if(!isset($zip_code)){
     <br>
 
     <label>Package Dimension:</label>
-    <input type="text" name="package_dimension" value="<?php echo htmlspecialchars($package_dimension); ?>">
+    <input type="text" name="package_dimension"  value="<?php echo htmlspecialchars($package_dimension); ?>">
     <br>
 
     <label>Total Value:</label>
@@ -96,12 +101,12 @@ if(!isset($zip_code)){
     </select>
     <br>
 
-    <label>User Address:</label>
-    <input type="text" name="user_address" value="<?php echo htmlspecialchars($user_address); ?>">
+  
+    <input type="text" name="user_address" placeholder="Enter your address" value="<?php echo htmlspecialchars($user_address); ?>" class="input-field" >
     <br>
 
-    <label> First Name: </label>
-    <input type= "text" name= "first_name" value= "<?php echo htmlspecialchars($first_name);?>">
+   
+    <input type= "text" name= "first_name" placeholder="First Name"value= "<?php echo htmlspecialchars($first_name);?>">
     <br>
     
     <label> Last Name:</label>
@@ -172,5 +177,43 @@ if(!isset($zip_code)){
     <br>
     <input type="submit" value="Send">
 </form>
+
+
+<!--Styling shipping form-->
+
+<style>
+
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-image: url('images/parcels-box-cardboard-boxes-smartphone-online-delivery-transportation-logistics-concept-pink-background-3d-rendering-illustration.jpg');
+    padding-left: 25px;
+
+    background-size: 1500; /* Make the background image cover the entire body */
+    background-position: center top; /* Center the background image vertically and align it to the bottom */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-attachment: fixed;
+    
+    margin: 0; /* Remove default margin */
+    padding: 4; /* Remove default padding */
+    font-family: Arial;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.input-field {
+    /* Estilo para los campos de entrada, ajusta según tus preferencias */
+    width: 34%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+
+
+</style>
+
 </body>
 </html>

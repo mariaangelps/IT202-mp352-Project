@@ -96,6 +96,7 @@ $shipping_companyf = "<br> <b> Company: </b> " . $shipping_company ;
             <span class = "value" ><?php echo $total_valuef; ?></span>
             <br>
             <img src = "images/Beige and Brown Running.jpg" alt = "Running Shoes Bar Code" width= "250";>
+            
            
     </main>
 
