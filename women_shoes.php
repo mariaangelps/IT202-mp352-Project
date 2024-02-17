@@ -1,5 +1,9 @@
-
 <?php
+//Maria Angel Palacios
+//02/16/2024
+//IT202-006 -> Phase 1 Project 
+//mp352@njit.edu 
+
 include ('header.php');
 //TOTAL VALUE, LESS  OR EQUAL THAN 1000
 $cotton_shoes = 127.99;
