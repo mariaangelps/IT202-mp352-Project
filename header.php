@@ -1,9 +1,11 @@
 <style>
 header{
-    padding: 0px; /* Add padding to header*/
+    padding: 0px; 
     text-align: left; 
     margin-top:0;
+    font-family: 'Courier New', Courier, monospace;
 }
+
 
     
 
@@ -11,13 +13,15 @@ header{
     <header>
         <h3>
             <nav>
-                <a href="home.php"> HOME </a> || 
-                <a href="women_shoes.php">  OUR PRODUCTS  </a>  ||
+                <a href="home.php"> Home </a> || 
+                <a href="women_shoes.php">  Our Products  </a>  ||
+                <a href = "shipping_form.php"> Delivery </a> 
             
 
 
             </nav>
         </h3>
+        
         
 </header>
 

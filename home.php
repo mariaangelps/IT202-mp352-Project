@@ -2,12 +2,12 @@
 
 <style>
     body{
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    margin: 0;
+    padding: 0; 
     background-image: url('images/este.jpg');
     padding-left: 25px;
     background-color: #F3CBCC;
-    background-size: 100%; /* Make the background image cover the entire body */
+    background-size: 100%; 
     background-repeat: no-repeat;
     margin-bottom:0;
     }

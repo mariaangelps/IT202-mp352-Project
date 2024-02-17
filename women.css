@@ -37,6 +37,46 @@ p {
     display: inline-block;
     margin-top: 0px;
     text-align: center;
-    margin-left: 30px; /* Adjust margin as needed */
+    margin-left: 30px; 
     margin-right:20px;
 }
+
+.package-container {
+    position: absolute; 
+    bottom: 10px; 
+    left: 10px; 
+}
+
+.form6{
+   
+    width: 150px; 
+    margin-top: 335px;
+    text-align: center;
+    margin-left: 30px; 
+    margin-right:20px;
+}
+
+.package-container1{
+    width:100px;
+    position: absolute; 
+    bottom: 10px; 
+    left: 230px; 
+
+}
+.form7{
+    width: 150px; 
+    margin-top:-40px;
+    text-align: center;
+    margin-left: 250px; 
+    margin-right:70px;
+}
+
+.bottom-right {
+    position: fixed;
+    bottom: 10;
+    right: 280;
+    height: 30%;
+    width: 40vw; 
+    border-radius: 10px;
+  }
+  
