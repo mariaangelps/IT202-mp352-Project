@@ -39,6 +39,6 @@
             <a href="feedback.php"> Site Feedback  </a> ||
             <a href="contact_us.php">Contact Us</a>
         </nav>
-    <img src="images/logo.jpg.png" alt="women shoes" class="corner-image">
+    <img src="imagesPh1/logo.jpg.png" alt="women shoes" class="corner-image">
     
 </footer>

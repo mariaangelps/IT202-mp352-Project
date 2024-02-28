@@ -1,0 +1,43 @@
+/*Maria Angel Palacios
+02/16/2024
+IT202-006 -> Phase 1 Project 
+mp352@njit.edu 
+*/
+
+body {
+  margin: 0; 
+  padding: 0; 
+  background-image: url('imagesPh1/parcels-box-cardboard-boxes-smartphone-online-delivery-transportation-logistics-concept-pink-background-3d-rendering-illustration.jpg');
+  padding-left: 20px;
+
+  background-size: cover; /* Make the background image cover the entire body */
+  background-position: center top; /* Center the background image vertically and align it to the top */
+  
+  
+  font-family: 'Courier New', Courier, monospace;
+  font-style: normal;
+  font-size: 20px;
+  color: black;
+}
+
+.input-field {    
+  width: 30%; /*size of the blanks*/
+  padding: 8px; 
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 12px; 
+  
+}
+
+main {
+  width: 600px;
+  margin: 40px auto 20px; 
+  padding: 10px;
+  border: 5px dashed #F9E6E7;
+  margin-left: 0px;
+}
+
+h3{
+  font-family:'Courier New', Courier, monospace;
+}

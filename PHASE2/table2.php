@@ -9,7 +9,9 @@ CREATE TABLE sportsequipment (
     description TEXT NOT NULL,
     Size               TEXT       NOT NULL ,    
     price DECIMAL(10,2) NOT NULL,
+    
     dateCreated DATETIME NOT NULL,
+
     PRIMARY KEY (sportsequipmentID)
 )
 

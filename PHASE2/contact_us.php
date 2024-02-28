@@ -16,7 +16,7 @@
 
 <style>
     body {
-        background-image: url('images/Minimalist Beauty Contact Us Instagram Post.png');
+        background-image: url('imagesPh1/Minimalist Beauty Contact Us Instagram Post.png');
         background-size: contain; 
         background-repeat: no-repeat;
         background-position: center center; 

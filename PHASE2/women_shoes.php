@@ -29,21 +29,21 @@ $green_lantern = 1100.00;
         <main>
             <!--Figure 1-->
             <figure>
-                <img src="images/2151005680.jpg" alt="Cotton Shoes"  >
+                <img src="imagesPh1/2151005680.jpg" alt="Cotton Shoes"  >
                 <figcaption><br>Cotton Shoes  </figcaption>
                 <figcaption> <p>Value: <?php echo "$" . $cotton_shoes;?></p> </figcaption>
             </figure>
 
              <!--Figure 2-->
              <figure>
-                <img src = "images/2151005684.jpg" alt = "Risky Flame">
+                <img src = "imagesPh1/2151005684.jpg" alt = "Risky Flame">
                 <figcaption> <br> Risky Flame  </figcaption>
                 <figcaption><p> Value: <?php echo "$" . $rojos;?></p></figcaption>
             </figure>
 
              <!--Figure 3-->
             <figure>
-                <img src = "images/2151005655.jpeg" alt = "Run Lovers">
+                <img src = "imagesPh1/2151005655.jpeg" alt = "Run Lovers">
                 <figcaption> <br>Run Lovers  </figcaption>
                 <figcaption><p> Value: <?php echo "$" . $runlovers;?></p></figcaption>
             </figure>
@@ -51,28 +51,28 @@ $green_lantern = 1100.00;
              <!--Figure 4-->
              <figure>
                 <br>
-                <img src = "images/Pasted Graphic.jpg.png" alt = "Todo Terreno">
+                <img src = "imagesPh1/Pasted Graphic.jpg.png" alt = "Todo Terreno">
                 <figcaption> <br> Todo Terreno Collection </figcaption>
                 <figcaption><p> Value: <?php echo "$" . $todo_terreno;?></p></figcaption>
             </figure>
 
             <!--Figure 5-->
             <figure>
-                <img src = "images/19600.jpg" alt = "Its Carnival">
+                <img src = "imagesPh1/19600.jpg" alt = "Its Carnival">
                 <figcaption> <br> Carnival Collection </figcaption>
                 <figcaption><p> Value: <?php echo "$" . $carnival;?></p></figcaption>
             </figure>
 
             <!--Figure 6-->
             <figure class="package-container">
-                <img src = "images/2151005728.jpg" alt = "Retro" class = "package">
+                <img src = "imagesPh1/2151005728.jpg" alt = "Retro" class = "package">
                 <figcaption> <br> Run in retro </figcaption>
                 <figcaption><p> Value: <?php echo "$" . $retro;?></p></figcaption>
             </figure>
 
             <!--Figure 7--> 
             <figure class="package-container1">
-                <img src = "images/2151005699.jpg" alt = "Green Lantern" class = "package">
+                <img src = "imagesPh1/2151005699.jpg" alt = "Green Lantern" class = "package">
                 <figcaption> Green Lantern</figcaption>
                 <figcaption><p> Value: <?php echo "$" . $green_lantern;?></p></figcaption>
             </figure>

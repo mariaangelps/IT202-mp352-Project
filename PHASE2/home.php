@@ -10,7 +10,7 @@
     body{
     margin: 0;
     padding: 0; 
-    background-image: url('images/este.jpg');
+    background-image: url('imagesPh1/este.jpg');
     padding-left: 25px;
     background-color: #F3CBCC;
     background-size: 100%; 

@@ -41,7 +41,7 @@ if (!isset($improvements)) {
 
 <style>
     body {
-        background-image: url('images/chat-bubbles-speech-bubble-icon-website-ui-pink-background-3d-rendering-illustration.jpg');
+        background-image: url('imagesPh1/chat-bubbles-speech-bubble-icon-website-ui-pink-background-3d-rendering-illustration.jpg');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
