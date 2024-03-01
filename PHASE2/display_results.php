@@ -1,8 +1,8 @@
 
 <?php
 //Maria Angel Palacios
-//02/16/2024
-//IT202-006 --> Phase 1 Project 
+//03/01/2024
+//IT202-006 --> Phase 2 Project 
 //mp352@njit.edu
 
   
@@ -13,9 +13,12 @@ $shipping_class = filter_input(INPUT_POST, 'shipping_class');
 $shipping_company = filter_input(INPUT_POST, 'shipping_company');
 $shipping_date = filter_input(INPUT_POST, 'shipping_date');
 $package_dimension = filter_input(INPUT_POST, 'package_dimension', FILTER_VALIDATE_INT);
-$total_value = filter_input(INPUT_POST, 'total_value', FILTER_VALIDATE_FLOAT);
 $company_address = filter_input(INPUT_POST, 'company_address');
 $user_address = filter_input(INPUT_POST, 'user_address');
+$product_price = filter_input(INPUT_POST,'product_price');
+$product_name = filter_input(INPUT_POST,'product_name');
+$product_code = filter_input(INPUT_POST,'product_code');
+$product_image = filter_input(INPUT_POST,'product_img');
 
 
 //user information
@@ -24,6 +27,9 @@ $last_name = filter_input(INPUT_POST,'last_name');
 $city = filter_input(INPUT_POST,'city');
 $state = filter_input(INPUT_POST,'state');
 $zip_code = filter_input(INPUT_POST,'zip_code'); 
+$product_price = filter_input(INPUT_POST,'product_price');
+$product_name = filter_input(INPUT_POST,'product_name');
+$product_code = filter_input(INPUT_POST,'product_code');
 
 //Check the value of the package is no more than 1000
 
@@ -61,10 +67,13 @@ $user_addressf = $user_address . "<br> <b> UNITED STATES </b>"; // United States
 $statef = $state;
 $datef = "<b>Shipping Date: </b> " . date_format(date_create($shipping_date),'m-d-Y');
 $zip_codef =$zip_code . ", " . "<b> $statef </b>";
-$total_valuef = "<br> <b> Total: </b> " . "$" . floatval($total_value);
 $package_dimensionf = "<br> <b> Size: </b> ". number_format($package_dimension) . " inches";
 $shipping_classf = "<br> <b> Class Type: </b> ". $shipping_class ;
 $shipping_companyf = "<br> <b> Company: </b> " . $shipping_company ;
+$product_pricef = "<br> <b> Total: </b> " . "$" . floatval($product_price);
+$product_namef = "<br> <b> Product Name : </b> " . ($product_name);
+$product_codef = "<br> <b> Code: </b> " .($product_code);
+$product_imagef = $product_image;
 
 ?>
 
@@ -95,9 +104,15 @@ $shipping_companyf = "<br> <b> Company: </b> " . $shipping_company ;
             <br>
             <span class = "package" ><?php echo $package_dimensionf; ?></span>
             <br>
-            <span class = "value" ><?php echo $total_valuef; ?></span>
+            <span class = "value" ><?php echo $product_pricef; ?></span>
             <br>
-            <img src = "imagesPh1/Beige and Brown Running.jpg" alt = "Running Shoes Bar Code" width= "250";>
+            <span class = "code" ><?php echo $product_codef; ?></span>
+            <br>
+            <span class = "name" ><?php echo $product_namef; ?></span>
+            <br>
+            <span class = "img" ><?php echo $product_imagef; ?></span>
+            <br>
+            
             
            
     </main>

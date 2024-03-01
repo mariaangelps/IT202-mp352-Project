@@ -1,7 +1,7 @@
 <?php
 //Maria Angel Palacios
-//02/16/2024
-//IT202-006 -> Phase 1 Project 
+//03/01/2024
+//IT202-006 -> Phase 2 Project 
 //mp352@njit.edu 
 
 // Check if it exists, otherwise create it
@@ -10,9 +10,6 @@ if(!isset($shipping_date)){
 }
 if(!isset($package_dimension)){
   $package_dimension='';
-}
-if(!isset($total_value)){
-  $total_value='';
 }
 
 if(!isset($shipping_class)){
@@ -44,9 +41,13 @@ if(!isset($city)){
 if(!isset($zip_code)){
   $zip_code='';
 }
-$total_value = filter_input(INPUT_POST, 'total_value', FILTER_VALIDATE_FLOAT);
-  
-  ?>
+
+$product_price = isset($_POST['product_price']) ? $_POST['product_price'] : '';
+$product_name = isset($_POST['product_name']) ? $_POST['product_name'] : '';
+$product_code = isset($_POST['product_code']) ? $_POST['product_code'] : '';
+$product_img= isset($_POST['product_img']) ? $_POST['product_img'] : '';
+?> 
+
 
 <html>
 <head>
@@ -96,10 +97,22 @@ $total_value = filter_input(INPUT_POST, 'total_value', FILTER_VALIDATE_FLOAT);
         <input type="text" name="package_dimension" class="input-field" value="<?php echo htmlspecialchars($package_dimension); ?>">
         <br>
 
-      <label>Total Value:</label>
-        <input type="text" name="total_value" class="input-field" value="<?php echo htmlspecialchars($total_value); ?>">
+      <label>Product Name:</label>
+          <input type="text" name="product_name" value="<?php echo htmlspecialchars($product_name); ?>" readonly>
+          <br>
+
+      <label>Product Price:</label>
+        <input type="text" name="product_price" value="<?php echo htmlspecialchars($product_price); ?>" readonly>
         <br>
 
+      <label>Product Code:</label>
+        <input type="text" name="product_code" value="<?php echo htmlspecialchars($product_code); ?>" readonly>
+        <br>
+        <label>Your Product:</label>
+          <img src="<?php echo htmlspecialchars($product_img); ?>" alt="Product Image">
+          <br>
+          
+      <!-- input-field for name, last name, adress and city-->
         <input type="text" name="user_address" placeholder="Enter your address" value="<?php echo htmlspecialchars($user_address); ?>" class="input-field" >
         <br>
 
@@ -111,6 +124,8 @@ $total_value = filter_input(INPUT_POST, 'total_value', FILTER_VALIDATE_FLOAT);
     
         <input type= "text" name= "city" class="input-field"  placeholder=" City " value= "<?php echo htmlspecialchars($city);?>">
         <br>
+        
+
     
       <label> State: </label> 
         <select id="state" name="state">

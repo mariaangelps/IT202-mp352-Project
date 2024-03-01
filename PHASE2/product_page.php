@@ -1,4 +1,9 @@
 <?php
+//Maria Angel Palacios
+//03/01/2024
+//IT202-006 -> Phase 2 Project 
+//mp352@njit.edu 
+
 require_once('database_njit.php');
 include('header.php');
 
@@ -55,12 +60,22 @@ $statement2->closeCursor();?>
                 <!--Print the product for each category-->
                 <?php foreach($products as $merchandise):?>
                     <tr>
-                    <td><?php echo $merchandise['sportsequipmentName']; ?></td>
-                    <td><?php echo $merchandise['sportsequipmentCode']; ?></td>
-                    <td><?php echo $merchandise['description']; ?></td>
-                    <td><?php echo $merchandise['Size']; ?></td>
-                    <td><?php echo $merchandise['price']; ?></td>
-                    <tr>
+                        <td><?php echo $merchandise['sportsequipmentName']; ?></td>
+                        <td><?php echo $merchandise['sportsequipmentCode']; ?></td>
+                        <td><?php echo $merchandise['description']; ?></td>
+                        <td><?php echo $merchandise['Size']; ?></td>
+                        <td><?php echo $merchandise['price']; ?></td>
+                        <td> 
+                            <form action="shipping_form.php" method="post" class="form1">
+                                <input type="hidden" name="product_name" value="<?php echo htmlspecialchars($merchandise['sportsequipmentName']); ?>">
+                                <input type="hidden" name="product_price" value="<?php echo $merchandise['price']; ?>">
+                                <input type="hidden" name="product_code" value="<?php echo $merchandise['sportsequipmentCode']; ?>">
+                                <input type="hidden" name="product_img" value="<?php echo $merchandise['product_image']; ?>">
+                                
+                                <input type="submit" value="Proceed to the shipping form">
+                            </form>
+                        </td>
+                    </tr>
                 <?php endforeach; ?>
         </table> 
             
@@ -72,19 +87,9 @@ $statement2->closeCursor();?>
                 <img src="<?php echo $merchandise['product_image']; ?>" alt="<?php echo $merchandise['sportsequipmentName']; ?>" class="product-image">
             </figure>
             <?php endforeach; ?>
-            <form action="shipping_form.php" method="post" class="form1">
-                        <input type="hidden" name="product_name" value="<?php echo htmlspecialchars($merchandise['sportsequipmentName']); ?>">
-                        <input type="hidden" name="product_price" value="<?php echo $merchandise['price']; ?>">
-                        <input type="submit" value="Proceed to the shipping form">
-                    </form>
+            
             </div>
     </main>
-   
-
-        
-       
-
-
 <?php include('footer.php'); ?>
 </body>
 </html>
