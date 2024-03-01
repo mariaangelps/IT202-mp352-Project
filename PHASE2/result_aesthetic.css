@@ -1,6 +1,6 @@
 /*Maria Angel Palacios
-    02/16.2024
-    IT202-006 -> Phase 1 Project 
+    03/01/2024
+    IT202-006 -> Phase 2 Project 
     mp352@njit.edu 
 */
 body {
@@ -54,10 +54,8 @@ main {
     font-size: 18px;
 }
 
-
-.polaroid_shoes{
-    width: 80%;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 25px;
+.img {
+    display: block; 
+    text-align: center; 
+    margin-bottom: 10px; 
 }

@@ -18,7 +18,8 @@ $user_address = filter_input(INPUT_POST, 'user_address');
 $product_price = filter_input(INPUT_POST,'product_price');
 $product_name = filter_input(INPUT_POST,'product_name');
 $product_code = filter_input(INPUT_POST,'product_code');
-$product_image = filter_input(INPUT_POST,'product_img');
+$product_img = filter_input(INPUT_POST,'product_img');
+$product_img = isset($POST['product_img']) ? $_GET['product_img'] : '';
 
 
 //user information
@@ -73,7 +74,7 @@ $shipping_companyf = "<br> <b> Company: </b> " . $shipping_company ;
 $product_pricef = "<br> <b> Total: </b> " . "$" . floatval($product_price);
 $product_namef = "<br> <b> Product Name : </b> " . ($product_name);
 $product_codef = "<br> <b> Code: </b> " .($product_code);
-$product_imagef = $product_image;
+
 
 ?>
 
@@ -110,8 +111,10 @@ $product_imagef = $product_image;
             <br>
             <span class = "name" ><?php echo $product_namef; ?></span>
             <br>
-            <span class = "img" ><?php echo $product_imagef; ?></span>
-            <br>
+            <span class="product-img">
+            <img src="<?php echo htmlspecialchars($product_img); ?>" alt="Product Image">
+            </span>
+            <?php echo $product_img; ?>
             
             
            

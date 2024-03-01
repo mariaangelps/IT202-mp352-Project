@@ -108,9 +108,9 @@ $product_img= isset($_POST['product_img']) ? $_POST['product_img'] : '';
       <label>Product Code:</label>
         <input type="text" name="product_code" value="<?php echo htmlspecialchars($product_code); ?>" readonly>
         <br>
-        <label>Your Product:</label>
-          <img src="<?php echo htmlspecialchars($product_img); ?>" alt="Product Image">
-          <br>
+      <label>Your Product:</label>
+        <img src="<?php echo htmlspecialchars($product_img); ?>" alt="Product Image">
+        <br>
           
       <!-- input-field for name, last name, adress and city-->
         <input type="text" name="user_address" placeholder="Enter your address" value="<?php echo htmlspecialchars($user_address); ?>" class="input-field" >

@@ -33,9 +33,9 @@ h3 {
 }
 
 img {
-  width: 150px; /* Set the width of the image */
-  height: auto; /* Let the height adjust proportionally */
-  border: 5px solid black; /* Add a border */
-  border-radius: 10px; /* Add border radius for rounded corners */
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Add a box shadow for depth */
+  width: 150px; 
+  height: auto; 
+  border: 5px solid white; 
+  border-radius: 10px; 
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
