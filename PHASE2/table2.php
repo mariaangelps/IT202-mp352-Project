@@ -24,7 +24,7 @@ sportsequipmentName, description, Size, price, dateCreated)
 VALUES (1, 'FUSETRAILB', 'Fuse 27.5' , 'Calm under pressure, yet deft and precise, the Fuse is an entirely different kind of hardtail.
 The Fuse 27.5 handles rough, sketchy descents and steep, technical climbs with absolute confidence. 
 Durable 29mm interal width alloy wheelset and 130-millimeters of suspension courtesy of an X-Fusion fork.',
-'SMALL' ,1274.99,NOW());
+'SMALL' ,1274.99,NOW(),'imagesPh2/96022-71_FUSE-275-ARCTBLU-BLK_FDSQ.webp.jpg');
 
 //bike2
 INSERT INTO sportsequipment (sportsequipmentCategoryID, sportsequipmentCode, 

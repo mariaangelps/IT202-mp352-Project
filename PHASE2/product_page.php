@@ -42,14 +42,16 @@ $statement2->closeCursor();?>
                 </a> ||
             <?php endforeach; ?>
         </nav>
-        <table id="productTable">
+        <table>
             <h1> Please select one </h1>
                 <th>Name</th>
                 <th>Code</th>
                 <th>Description</th>
                 <th>Size</th>
                 <th>Price</th>
+                <th>Action</th>
             </tr>
+           
                 <!--Print the product for each category-->
                 <?php foreach($products as $merchandise):?>
                     <tr>
@@ -58,26 +60,29 @@ $statement2->closeCursor();?>
                     <td><?php echo $merchandise['description']; ?></td>
                     <td><?php echo $merchandise['Size']; ?></td>
                     <td><?php echo $merchandise['price']; ?></td>
-                    
+                    <tr>
                 <?php endforeach; ?>
         </table> 
-        
-           <!-- Assuming this part of the code is within a loop that fetches products -->
-           <?php foreach($products as $merchandise):?>
-    <figure class="package-container1">
-        <img src="imagesPh2/<?php echo $merchandise['imagesPh2/96022-71_FUSE-275-ARCTBLU-BLK_FDSQ.webp.jpg']; ?>" alt="<?php echo $merchandise['sportsequipmentName']; ?>" class="package">
-        <figcaption><?php echo $merchandise['sportsequipmentName']; ?></figcaption>
-    </figure>
-<?php endforeach; ?>
-
-
-    
-
-
-    
+            
+           <!-- Foreach loop that prints the name and picture for each product-->
+           <div class="product-container">
+            <?php foreach($products as $merchandise): ?>
+            <figure class="package-container1">
+                <figcaption><?php echo $merchandise['sportsequipmentName']; ?></figcaption>
+                <img src="<?php echo $merchandise['product_image']; ?>" alt="<?php echo $merchandise['sportsequipmentName']; ?>" class="product-image">
+            </figure>
+            <?php endforeach; ?>
+            <form action="shipping_form.php" method="post" class="form1">
+                        <input type="hidden" name="product_name" value="<?php echo htmlspecialchars($merchandise['sportsequipmentName']); ?>">
+                        <input type="hidden" name="product_price" value="<?php echo $merchandise['price']; ?>">
+                        <input type="submit" value="Proceed to the shipping form">
+                    </form>
+            </div>
     </main>
+   
 
-    
+        
+       
 
 
 <?php include('footer.php'); ?>
