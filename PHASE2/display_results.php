@@ -82,7 +82,7 @@ $product_codef = "<br> <b> Code: </b> " .($product_code);
 <html>
 <head>
   <title>Shipping Tag</title>
-  <link rel="stylesheet" href="result_aesthetic.css"/>
+  <link rel="stylesheet" href= display.css/>
 </head>
 
 <body>
@@ -112,8 +112,9 @@ $product_codef = "<br> <b> Code: </b> " .($product_code);
             <br>
             <span class = "name" ><?php echo $product_namef; ?></span>
             <br>
-            <img src="<?php echo $product_img; ?>" alt="Product Image">
-            </span>
+            <img src="<?php echo $product_img; ?>" class="img" alt="Product Image">
+    
+            
     </main>
 
     <?php include ('footer.php');?>

@@ -7,7 +7,7 @@ body {
     margin: 0; 
     padding: 4; 
     font-family: 'Courier New', Courier, monospace;
-    background-image: url('imagesPh1/front-view-paper-clip-with-copy-space.jpg.jpeg');
+    
     padding-left: 12px;
     height: 100vh;
     background-size: contain;
@@ -30,7 +30,7 @@ footer {
     margin-left: 0px;
 }
 
-main {
+main{
     position: relative;
     border: 5px dashed; 
     width: 400px;
@@ -38,25 +38,20 @@ main {
     padding: 8px;
     color:black;
     margin-left: 0px;
+    border: 3px solid black; 
     
 }
 
- .value{
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
-    font-size: 18px;
-}
-.package{
-    position: absolute;
-    top: 8px;
-    right: 16px;
-    font-size: 18px;
+
+.dashed-box {
+    border: 5px dashed black;
+    padding: 8px;
+    margin-bottom: 20px; /* Adjust as needed */
+    text-align: center; /* Or adjust alignment as needed */
 }
 
-
-img {
-  width: 150px; 
+img{
+    width: 150px; 
   height: auto; 
   border: 5px solid white; 
   border-radius: 10px; 
