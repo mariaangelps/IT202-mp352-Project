@@ -1,16 +1,16 @@
 <?php include ('header.php');
-//Maria Angel Palacios
-//02/16/2024
-//IT202-006 -> Phase 1 Project 
-//mp352@njit.edu 
-
+/*Maria Angel Palacios
+    03/01/2024
+    IT202-006 -> Phase 2 Project 
+    mp352@njit.edu 
+*/
 ?>
 
 <style>
     body{
     margin: 0;
     padding: 0; 
-    background-image: url('imagesPh1/este.jpg');
+    background-image: url('imagesPh2/home.png');
     padding-left: 25px;
     background-color: #F3CBCC;
     background-size: 100%; 

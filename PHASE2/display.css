@@ -7,11 +7,11 @@ body {
     margin: 0; 
     padding: 4; 
     font-family: 'Courier New', Courier, monospace;
-    background-image: url('imagesPh2/gift-box-with-rope-heart.jpg-paper-clip-with-copy-space.jpg.jpeg');
     padding-left: 12px;
     height: 100vh;
     background-size: contain;
     background-attachment: fixed;
+    background-image: url('imagesPh2/box.jpg.png');
     
 }
 
@@ -52,6 +52,7 @@ main {
     top: 8px;
     right: 16px;
     font-size: 18px;
+    
 }
 
 
