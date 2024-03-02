@@ -82,7 +82,7 @@ $product_codef = "<br> <b> Code: </b> " .($product_code);
 <html>
 <head>
   <title>Shipping Tag</title>
-  <link rel="stylesheet" href= display.css/>
+  <link rel="stylesheet" href= "display.css"/>
 </head>
 
 <body>
@@ -113,6 +113,7 @@ $product_codef = "<br> <b> Code: </b> " .($product_code);
             <span class = "name" ><?php echo $product_namef; ?></span>
             <br>
             <img src="<?php echo $product_img; ?>" class="img" alt="Product Image">
+            <img src="imagesPh2/barcode.jpg" class="barcode" alt="barcode">
     
             
     </main>

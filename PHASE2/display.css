@@ -7,7 +7,7 @@ body {
     margin: 0; 
     padding: 4; 
     font-family: 'Courier New', Courier, monospace;
-    
+    background-image: url('imagesPh2/gift-box-with-rope-heart.jpg-paper-clip-with-copy-space.jpg.jpeg');
     padding-left: 12px;
     height: 100vh;
     background-size: contain;
@@ -30,7 +30,7 @@ footer {
     margin-left: 0px;
 }
 
-main{
+main {
     position: relative;
     border: 5px dashed; 
     width: 400px;
@@ -38,22 +38,31 @@ main{
     padding: 8px;
     color:black;
     margin-left: 0px;
-    border: 3px solid black; 
     
 }
 
-
-.dashed-box {
-    border: 5px dashed black;
-    padding: 8px;
-    margin-bottom: 20px; /* Adjust as needed */
-    text-align: center; /* Or adjust alignment as needed */
+ .value{
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: 18px;
+}
+.package{
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
 }
 
-img{
-    width: 150px; 
-  height: auto; 
-  border: 5px solid white; 
-  border-radius: 10px; 
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+
+.img{
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+}
+.barcode{
+    width: 150px;
+    height: auto; 
+    margin-top: 10px;
 }
