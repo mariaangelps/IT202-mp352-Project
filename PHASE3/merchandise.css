@@ -1,0 +1,59 @@
+/*Maria Angel Palacios
+    03/01/2024
+    IT202-006 -> Phase 2 Project 
+    mp352@njit.edu 
+*/
+
+table, th, td {
+    border: 3px dashed white;
+    margin: 0; 
+    padding: 4; 
+    
+}
+
+
+body{
+    background-color: #ffebeb;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+header{
+    padding: 4px; 
+    text-align: center; 
+    margin-top:20;
+}
+
+footer {
+    padding: 0px;
+    position:relative; 
+    margin-left: 0px;
+}
+
+.product-image{
+    width: 150px;
+    height: auto;
+    border: 5px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+figcaption {
+   
+    font-weight: bold;
+}
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Align items horizontally */
+    gap: 20px; /* Adjust the space between items */
+    text-align: center;
+}
+
+.form1{
+    display: inline-block;
+    margin-top: 0px;
+    margin-left: 40px; 
+    margin-right:20px;
+}
+
+
