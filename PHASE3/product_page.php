@@ -1,17 +1,18 @@
 <?php
 //Maria Angel Palacios
 //03/01/2024
-//IT202-006 -> Phase 2 Project 
+//IT202-006 -> Phase 3 Project 
 //mp352@njit.edu 
 
 require_once('database_njit.php');
 include('header.php');
 
-//Get category ID
+///Get category ID
 $sportsequipmentCategoryID = filter_input(INPUT_GET, 'sportsequipmentCategoryID', FILTER_VALIDATE_INT);
-if ($category_id == NULL || $category_id == FALSE) {
-    $category_id = 1;
-  }
+if ($sportsequipmentCategoryID == NULL || $sportsequipmentCategoryID == FALSE) {
+    $sportsequipmentCategoryID = 1;
+}
+
   
 //Syntax: Select * from 'table name where categories' 
 //Select all categories ordered by category ID

@@ -27,7 +27,7 @@ $statement1->closeCursor();
     <main>
         <h1> Check out what MP Kicks has for you </h1>
         <h3> Please select one </h3>
-        <form action="add_products.php" id="add_product_form">
+        <form action="add_products.php" method= "post">
         <label>Category:</label>
             <select name="category_id">
                 <?php foreach ($categories as $distribution): ?>
@@ -40,18 +40,18 @@ $statement1->closeCursor();
 
 
     <label>Code:</label>
-    <input type="text" name="product_code"><br>
-
+    <input type="text" name="product_code" value="<?php echo isset($_POST['product_code']) ? htmlspecialchars($_POST['product_code']) : ''; ?>"><br>
     <label>Name:</label>
-    <input type="text" name="product_name"><br>
+<input type="text" name="product_name"
+    value="<?php echo isset($_POST['product_name']) ? htmlspecialchars($_POST['product_name']) : ''; ?>"><br>
 
-    <label>Description:</label>
-    <input type="text" name="descrip"><br>
+<label>Description:</label>
+<input type="text" name="descrip"
+    value="<?php echo isset($_POST['descrip']) ? htmlspecialchars($_POST['descrip']) : ''; ?>"><br>
 
-    <label>Price:</label>
-    <input type="text" name="product_price"><br>
-    
-
+<label>Price:</label>
+<input type="text" name="product_price"
+    value="<?php echo isset($_POST['product_price']) ? htmlspecialchars($_POST['product_price']) : ''; ?>"><br>
     <input type="submit" value="Add Product"><br>
 </form>
     <p><a href="product_page.php">View Product List</a></p>
