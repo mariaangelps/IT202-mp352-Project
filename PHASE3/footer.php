@@ -34,6 +34,7 @@
 </style>
 
 <footer>
+  <p>&copy; <?php echo date("D L F Y"); ?> MP Kicks, Inc.</p>
     <h5>
         <nav>
             <a href="feedback.php"> Site Feedback  </a> ||

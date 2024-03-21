@@ -23,6 +23,7 @@ $product_img = filter_input(INPUT_POST, 'product_img');
 
 
 
+
 //user information
 $first_name = filter_input(INPUT_POST,'first_name');
 $last_name = filter_input(INPUT_POST,'last_name');

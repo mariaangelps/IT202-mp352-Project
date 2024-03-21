@@ -200,8 +200,9 @@ $product_img= isset($_POST['product_img']) ? $_POST['product_img'] : '';
         <input type="submit" value="Send">
     </form>
   </main>
-  <?php include ('footer.php');?>
+  
 </body>
+<h6><?php include ('footer.php');?></h6>
 </html>
 
    
