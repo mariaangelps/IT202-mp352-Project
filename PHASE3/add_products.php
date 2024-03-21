@@ -17,17 +17,21 @@ if(isset($_POST['product_image'])){
     $product_image = $_POST['product_image'];
 }
 
+// Check for duplicates
+require_once('database_njit.php');
+$checkduplicates = "SELECT COUNT(*) AS duplicate_count FROM sportsequipment WHERE sportsequipmentCode = :product_code";
+$statement = $db->prepare($checkduplicates);
+$statement->bindValue(':product_code', $code);
+$statement->execute();
+$result = $statement->fetch(PDO::FETCH_ASSOC);
+$duplicate_count = (int) $result['duplicate_count'];
 
-
-
-
-// Validate received data
-if ($category_id == null || $code == null || 
-    $name == null || $description == null || $price == null || $size == null || $price>=1000) {
-    $error = "Invalid product data, Check all fields and try again.<p><b>  Price cannot be greater than 1000, neither the code equal to others.";
-    echo "<p>$error</p>";
+if ($duplicate_count > 0  || $price >= 1000) {
+    $error_message = "Duplicate product code found. Please use a unique product code. <p><b> Recall that Price cannot be greater than 1000";
+} elseif ($category_id == null || $code == null || 
+          $name == null || $description == null || $price == null || $size == null ) {
+    $error_message = "Invalid product data. Check all fields and try again.";
 } else {
-    require_once('database_njit.php');
     // SQL query for data insertion
     $query = 'INSERT INTO sportsequipment (sportsequipmentCategoryID, sportsequipmentCode, 
     sportsequipmentName, description, Size, price, dateCreated, product_image) 
