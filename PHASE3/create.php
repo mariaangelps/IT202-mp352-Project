@@ -26,7 +26,7 @@ $statement1->closeCursor();
 <!DOCTYPE html>
 <html>
 <head>
-    <title> My Product Page </title>
+    <title> MPCatalog </title>
     <link rel="stylesheet" href="merchandise.css" />
 </head>
 
