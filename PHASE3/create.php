@@ -52,7 +52,11 @@ $statement1->closeCursor();
 <label>Price:</label>
 <input type="text" name="product_price"
     value="<?php echo isset($_POST['product_price']) ? htmlspecialchars($_POST['product_price']) : ''; ?>"><br>
-    <input type="submit" value="Add Product"><br>
+   
+
+<label> Size:</label>
+<input type="text" name="size" value="<?php echo isset($_POST['size']) ? htmlspecialchars($_POST['size']) : ''; ?>"><br>
+<input type="submit" value="Add Product"><br>
 </form>
     <p><a href="product_page.php">View Product List</a></p>
 </main>
