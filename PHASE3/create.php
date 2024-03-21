@@ -7,6 +7,13 @@
 require_once('database_njit.php');
 include('header.php');
 
+
+  
+//Display the error message if it's not empty
+  if (!empty($error_message)) {
+    echo "<div style='color: red;'>$error_message</div>";
+  }
+  
 //Select all categories ordered by category ID
 $queryAllCategory = 'SELECT * FROM sportsequipmentCategories ORDER BY sportsequipmentCategoryID';
 // Prepare and execute the query
@@ -57,6 +64,7 @@ $statement1->closeCursor();
 <label> Size:</label>
 <input type="text" name="size" value="<?php echo isset($_POST['size']) ? htmlspecialchars($_POST['size']) : ''; ?>"><br>
 <input type="submit" value="Add Product"><br>
+
 </form>
     <p><a href="product_page.php">View Product List</a></p>
 </main>

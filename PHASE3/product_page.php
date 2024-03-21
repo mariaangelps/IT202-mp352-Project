@@ -52,37 +52,46 @@ $statement2->closeCursor();?>
             <?php endforeach; ?>
         </nav>
         <table>
-            <tr>
-                <th>Name</th>
-                <th>Code</th>
-                <th>Description</th>
-                <th>Size</th>
-                <th>Price</th>
-                <th>Action</th>
-            </tr>
-           
-                <!--Print the product for each category-->
-                <?php foreach($products as $merchandise):?>
-                    <tr>
-                        <td><?php echo $merchandise['sportsequipmentName']; ?></td>
-                        <td><?php echo $merchandise['sportsequipmentCode']; ?></td>
-                        <td><?php echo $merchandise['description']; ?></td>
-                        <td><?php echo $merchandise['Size']; ?></td>
-                        <td><?php echo $merchandise['price']; ?></td>
-                        <td> 
-                            <form action="shipping_form.php" method="post" class="form1">
-                                <input type="hidden" name="product_name" value="<?php echo htmlspecialchars($merchandise['sportsequipmentName']); ?>">
-                                <input type="hidden" name="product_price" value="<?php echo $merchandise['price']; ?>">
-                                <input type="hidden" name="product_code" value="<?php echo $merchandise['sportsequipmentCode']; ?>">
-                                <input type="hidden" name="product_img" value="<?php echo $merchandise['product_image']; ?>">
-                                
-                                <input type="submit" value="Proceed to the shipping form">
-                            </form>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
-        </table> 
+    <tr>
+        <th>Name</th>
+        <th>Code</th>
+        <th>Description</th>
+        <th>Size</th>
+        <th>Price</th>
+        <th> Date </th>
+        <th>Action</th>
+        <th>Delete</th>
+    
+    </tr>
+    <?php foreach($products as $merchandise):?>
+        <tr>
+            <td><?php echo $merchandise['sportsequipmentName']; ?></td>
+            <td><?php echo $merchandise['sportsequipmentCode']; ?></td>
+            <td><?php echo $merchandise['description']; ?></td>
+            <td><?php echo $merchandise['Size']; ?></td>
+            <td><?php echo $merchandise['price']; ?></td>
+            <td><?php echo $merchandise['dateCreated'];?></td>
             
+            <td> 
+                <form action="shipping_form.php" method="post" class="form1">
+                    <input type="hidden" name="product_name" value="<?php echo htmlspecialchars($merchandise['sportsequipmentName']); ?>">
+                    <input type="hidden" name="product_price" value="<?php echo $merchandise['price']; ?>">
+                    <input type="hidden" name="product_code" value="<?php echo $merchandise['sportsequipmentCode']; ?>">
+                    <input type="hidden" name="product_img" value="<?php echo $merchandise['product_image']; ?>">
+                    <input type="submit" value="Proceed to the shipping form">
+                </form>
+            </td>
+            <td>
+                <form action="delete_product.php" method="post">
+                    <input type="hidden" name="sportsequipmentID" value="<?php echo $merchandise['sportsequipmentID']; ?>" />
+                    <input type="hidden" name="sportsequipmentCategoryID" value="<?php echo $merchandise['sportsequipmentCategoryID']; ?>" />
+                    <input type="submit" value="Delete" />
+                </form>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+</table>
+
            <!-- Foreach loop that prints the name and picture for each product-->
            <div class="product-container">
             <?php foreach($products as $merchandise): ?>
@@ -91,8 +100,9 @@ $statement2->closeCursor();?>
                 <img src="<?php echo $merchandise['product_image']; ?>" alt="<?php echo $merchandise['sportsequipmentName']; ?>" class="product-image">
             </figure>
             <?php endforeach; ?>
-            
             </div>
+
+            <
     </main>
 <?php include('footer.php'); ?>
 </body>
