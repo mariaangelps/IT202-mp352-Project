@@ -1,7 +1,5 @@
 <?php
-echo "<pre>";
-print_r($_POST);
-echo "</pre>";
+
 // Receive data from the form
 $error_message  ='';
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
@@ -26,12 +24,19 @@ $statement->execute();
 $result = $statement->fetch(PDO::FETCH_ASSOC);
 $duplicate_count = (int) $result['duplicate_count'];
 
-if ($duplicate_count > 0  || $price >= 1000) {
+if ($duplicate_count > 0  && $price >= 1000) {
     $error_message = "Duplicate product code found. Please use a unique product code. <p><b> Recall that Price cannot be greater than 1000";
 } elseif ($category_id == null || $code == null || 
           $name == null || $description == null || $price == null || $size == null ) {
     $error_message = "Invalid product data. Check all fields and try again.";
-} else {
+} 
+else if ($price >= 1000){
+     $error_message = "<p><b> Recall that Price cannot be greater than 1000";
+}
+else if($duplicate_count > 0){
+     $error_message = "Duplicate product code found. Please use a unique product code.";
+}
+    else {
     // SQL query for data insertion
     $query = 'INSERT INTO sportsequipment (sportsequipmentCategoryID, sportsequipmentCode, 
     sportsequipmentName, description, Size, price, dateCreated, product_image) 
