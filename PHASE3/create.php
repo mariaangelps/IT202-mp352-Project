@@ -27,7 +27,7 @@ $statement1->closeCursor();
     <main>
         <h1> Check out what MP Kicks has for you </h1>
         <h3> Please select one </h3>
-        <form action="add_products.php" method="post" id="add_product_form">
+        <form action="add_products.php" id="add_product_form">
         <label>Category:</label>
             <select name="category_id">
                 <?php foreach ($categories as $distribution): ?>
@@ -50,8 +50,7 @@ $statement1->closeCursor();
 
     <label>Price:</label>
     <input type="text" name="product_price"><br>
-    <label>Size:</label>
-    <input type="text" name="size"><br>
+    
 
     <input type="submit" value="Add Product"><br>
 </form>

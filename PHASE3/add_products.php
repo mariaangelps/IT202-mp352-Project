@@ -1,37 +1,40 @@
 <?php
-echo "<pre>";
-print_r($_POST);
-echo "</pre>";
+// Verifica si se han enviado datos por POST
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Recibe los datos del formulario
+    $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
+    $code = filter_input(INPUT_POST, 'product_code');
+    $name = filter_input(INPUT_POST, 'product_name');
+    $description = filter_input(INPUT_POST, 'descrip');
+    $price = filter_input(INPUT_POST, 'product_price', FILTER_VALIDATE_FLOAT);
 
-$category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
-$code = filter_input(INPUT_POST, 'product_code');
-$name = filter_input(INPUT_POST, 'product_name');
-$description = filter_input(INPUT_POST, 'descrip');
-$price = filter_input(INPUT_POST, 'product_price', FILTER_VALIDATE_FLOAT);
-$size = filter_input(INPUT_POST,'size');
+    // Validación de los datos recibidos
+    if ($category_id === false || $code === null || $name === null || $price === false) {
+        $error = "Invalid product data. Check all fields and try again.";
+        echo "<p>$error</p>";
+    } else {
+        // Consulta SQL para la inserción de datos
+        $query = 'INSERT INTO sportsequipment (sportsequipmentCategoryID, sportsequipmentCode, 
+        sportsequipmentName, description, price, dateCreated) 
+                  VALUES (:category_id, :product_code, :product_name, :descrip, :product_price, NOW())';
 
-// Validate inputs
-if ($category_id == NULL || $category_id == FALSE || $code == NULL || 
-        $name == NULL || $price == NULL || $price == FALSE)||$size==NULL || $size == f {
-    $error = "Invalid product data. Check all fields and try again.";
-    echo "$error <br>";
-    // include('error.php');
-} else {
-    require_once('database_njit.php');
+        // Preparación y ejecución de la consulta
+        $statement = $db->prepare($query);
+        $statement->bindValue(':category_id', $category_id);
+        $statement->bindValue(':product_code', $code);
+        $statement->bindValue(':product_name', $name);
+        $statement->bindValue(':descrip', $description);
+        $statement->bindValue(':product_price', $price);
+        
+        $success = $statement->execute();
+        if ($success) {
+            echo "<p>Product inserted successfully.</p>";
+        } else {
+            echo "<p>Failed to insert product.</p>";
+        }
 
-    $query = 'INSERT INTO sportsequipment (sportsequipmentCategoryID, sportsequipmentCode, 
-              sportsequipmentName, description,price) 
-              VALUES (:category_id, :product_code, :product_name, :descrip, :product_price)';
-    $statement = $db->prepare($query);
-    $statement->bindValue(':category_id', $category_id);
-    $statement->bindValue(':product_code', $code);
-    $statement->bindValue(':product_name', $name);
-    $statement->bindValue(':descrip', $description);
-    $statement->bindValue(':product_price', $price);
-    $success = $statement->execute();
-    $statement->closeCursor();
-    echo "<p>Your insert statement status is $success</p>";
-
+        $statement->closeCursor();
+    }
 }
 ?>
 
