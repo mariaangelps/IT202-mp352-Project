@@ -7,7 +7,7 @@
 <style>
   h5 {
     padding: 0px;
-    margin:0; /* Removes default margin */
+    margin:0;
   }
   
   footer {

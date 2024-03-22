@@ -30,15 +30,18 @@
     $result = $statement->fetch(PDO::FETCH_ASSOC);
     $duplicate_count = (int) $result['duplicate_count'];
 
-    // Display the error message with the appropriate CSS class
+    // Error Validation Message
     if ($duplicate_count > 0 && $price >= 1000) {
-        echo "<p class='error-message'>Duplicate product code found. Please use a unique product code. Recall that Price cannot be greater than 1000</p>";
+        echo "<p class='error-message'>Duplicate product code found. Please use a unique product code. Recall that Price cannot be greater than $1000</p>";
     } elseif ($category_id == null || $code == null || $name == null || $description == null || $price == null || $size == null ) {
         echo "<p class='error-message'>Invalid product data. Check all fields and try again.</p>";
     } elseif ($price >= 1000) {
-        echo "<p class='error-message'>Recall that Price cannot be greater than 1000</p>";
+        echo "<p class='error-message'>Recall that Price cannot be greater than $1000</p>";
     } elseif ($duplicate_count > 0) {
         echo "<p class='error-message'>Duplicate product code found. Please use a unique product code.</p>";
+    }
+    elseif ($price < 0){
+        echo"<p class='error-message'>Invalid Price, cannot be less than 0, Enter a Valid Value</p>";
     }
 
         else {

@@ -51,18 +51,18 @@ $statement2->closeCursor();?>
             <?php endforeach; ?>
         </nav>
         <table>
-    <tr>
-        <th>Name</th>
-        <th>Code</th>
-        <th>Description</th>
-        <th>Size</th>
-        <th>Price</th>
-        <th> Date </th>
-        <th>Action</th>
-        <th>Delete</th>
+        <tr>
+            <th>Name</th>
+            <th>Code</th>
+            <th>Description</th>
+            <th>Size</th>
+            <th>Price</th>
+            <th> Date </th>
+            <th>Action</th>
+            <th>Delete</th>
     
-    </tr>
-    <?php foreach($products as $merchandise):?>
+        </tr>
+        <?php foreach($products as $merchandise):?>
         <tr>
             <td><?php echo $merchandise['sportsequipmentName']; ?></td>
             <td><?php echo $merchandise['sportsequipmentCode']; ?></td>
@@ -88,8 +88,8 @@ $statement2->closeCursor();?>
                 </form>
             </td>
         </tr>
-    <?php endforeach; ?>
-</table>
+        <?php endforeach; ?>
+        </table>
 
            <!-- Foreach loop that prints the name and picture for each product-->
            <div class="product-container">

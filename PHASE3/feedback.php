@@ -61,7 +61,7 @@ if (!isset($improvements)) {
 
     h5 {
         margin-top: 20px; 
-        text-align: center; /* centers the text */
+        text-align: center; 
     }
 </style>
 

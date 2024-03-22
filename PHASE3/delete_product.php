@@ -6,7 +6,7 @@
 */
 include('header.php');
 
-//require once es para add los valores a esa base de datos 
+//require once is to add values to the database
 require_once('database_njit.php');
 $product_id = filter_input(INPUT_POST,'sportsequipmentID',FILTER_VALIDATE_INT);
 $category_id = filter_input(INPUT_POST,'sportsequipmentCategoryID',FILTER_VALIDATE_INT);
@@ -37,26 +37,26 @@ include('footer.php');
 
 body {
     background-image: url("imagesPh3/empty-shopping-basket-online-shopping-concept-pink-background-3d-rendering.jpg");
-    background-size: cover; /* Make the background image cover the entire element */
-    background-position: center; /* Center the background image */
+    background-size: cover; 
+    background-position: center; 
     font-family: 'Courier New', Courier, monospace;
-    font-size: 18px; /* Adjust as needed */
-    padding: 20px; /* Add padding for better readability */
-    margin: 0; /* Remove default margin */
+    font-size: 18px; 
+    padding: 20px; 
+    margin: 0; 
 }
 
 header{
     padding: 4px; 
     text-align: center; 
     margin-top:20;
-    font-size: 18px; /* Adjust as needed */
+    font-size: 18px; 
 }
 
 footer {
     padding: 0px;
     position:relative; 
     margin-left: 0px;
-    font-size: 18px; /* Adjust as needed */
+    font-size: 18px; 
 }
 
 
