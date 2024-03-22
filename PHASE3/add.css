@@ -14,11 +14,12 @@ table, th, td {
 
 body{
     background-image: url("imagesPh3/empty-shopping-basket-online-shopping-concept-pink-background-3d-rendering.jpg");
-    background-size: 1400px; /* Adjust as needed */
-    background-position: center ; /* Add this line */
+    background-size: cover; /* Make the background image cover the entire element */
+    background-position: center; /* Center the background image */
     font-family: 'Courier New', Courier, monospace;
-    color: #23354e;
-    font-size: 5px;
+    font-size: 18px; /* Adjust as needed */
+    padding: 20px; /* Add padding for better readability */
+    margin: 0; /* Remove default margin */
 
 }
 
@@ -26,12 +27,14 @@ header{
     padding: 4px; 
     text-align: center; 
     margin-top:20;
+    font-size: 18px; /* Adjust as needed */
 }
 
 footer {
     padding: 0px;
     position:relative; 
     margin-left: 0px;
+    font-size: 18px; /* Adjust as needed */
 }
 
 .error-message {

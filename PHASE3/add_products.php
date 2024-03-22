@@ -71,12 +71,15 @@
         if (!empty($error_message)) {
             echo "<p>$error_message</p>";
         }
+        
     ?>
     <html>
     <head>
         <title> Insert Products </title>
         <link rel="stylesheet" href="add.css"/>
     </head>
+    <body>
         <h1><a href="product_page.php">View Product List</a></h1>
-        <?php include('footer.php'); ?>
+    </body>  
+    <?php include('footer.php'); ?> 
     </html>

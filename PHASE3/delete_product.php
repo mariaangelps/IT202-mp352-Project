@@ -4,6 +4,7 @@
     IT202-006 -> Phase 3 Project 
     mp352@njit.edu 
 */
+include('header.php');
 
 //require once es para add los valores a esa base de datos 
 require_once('database_njit.php');
@@ -21,11 +22,45 @@ if($product_id!=FALSE && $category_id!=FALSE){
     echo "<p> Item deleted! ";
 
 }
+include('footer.php');
 ?>
+<html>
+    <head>
+        <title> Deleting Items </title>
+    </head>
+    <body>
+    <p><a href="product_page.php"></p>
+    </body>
+</html>
 
- 
-<p><a href="product_page.php">
+<style>
+
+body {
+    background-image: url("imagesPh3/empty-shopping-basket-online-shopping-concept-pink-background-3d-rendering.jpg");
+    background-size: cover; /* Make the background image cover the entire element */
+    background-position: center; /* Center the background image */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px; /* Adjust as needed */
+    padding: 20px; /* Add padding for better readability */
+    margin: 0; /* Remove default margin */
+}
+
+header{
+    padding: 4px; 
+    text-align: center; 
+    margin-top:20;
+    font-size: 18px; /* Adjust as needed */
+}
+
+footer {
+    padding: 0px;
+    position:relative; 
+    margin-left: 0px;
+    font-size: 18px; /* Adjust as needed */
+}
+
+
+</style>
 
 <button type="button">Continue shopping!</button>
 </a>
-</p>

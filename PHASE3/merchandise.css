@@ -26,14 +26,15 @@ header{
     padding: 4px; 
     text-align: center; 
     margin-top:20;
+    font-size: 18px; /* Adjust as needed */
 }
 
 footer {
     padding: 0px;
     position:relative; 
     margin-left: 0px;
+    font-size: 18px; /* Adjust as needed */
 }
-
 .product-image{
     width: 150px;
     height: auto;
