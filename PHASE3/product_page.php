@@ -1,8 +1,9 @@
 <?php
-//Maria Angel Palacios
-//03/01/2024
-//IT202-006 -> Phase 3 Project 
-//mp352@njit.edu 
+/*Maria Angel Palacios
+    03/21/2024
+    IT202-006 -> Phase 3 Project 
+    mp352@njit.edu 
+*/
 
 require_once('database_njit.php');
 include('header.php');
@@ -23,7 +24,6 @@ $statement1->execute();
 //gets the rows and returns them as an array in a new variable called categories
 $categories = $statement1->fetchAll();
 $statement1->closeCursor();
-
 //Gets the product or merchandise for each category
 $queryEachProduct = 'SELECT * FROM sportsequipment WHERE sportsequipmentCategoryID=:categoryID';
 $statement2=$db->prepare($queryEachProduct);
@@ -41,7 +41,6 @@ $statement2->closeCursor();?>
     <main>
         <h1> Check out what MP Kicks has for you </h1>
         <nav>
-
             <?php foreach ($categories as $distribution): ?>
                 <!-- "?sportsequipmentCategoryID=" will be a parameter of the url-->
                 <!--distribution variable will hold the categoryID for each category and then instead of printing out the ID, we 
@@ -94,15 +93,15 @@ $statement2->closeCursor();?>
 
            <!-- Foreach loop that prints the name and picture for each product-->
            <div class="product-container">
-            <?php foreach($products as $merchandise): ?>
-            <figure class="package-container1">
-                <figcaption><?php echo $merchandise['sportsequipmentName']; ?></figcaption>
-                <img src="<?php echo $merchandise['product_image']; ?>" alt="<?php echo $merchandise['sportsequipmentName']; ?>" class="product-image">
-            </figure>
-            <?php endforeach; ?>
+                <?php foreach($products as $merchandise): ?>
+                    <figure class="package-container1">
+                        <figcaption><?php echo $merchandise['sportsequipmentName']; ?></figcaption>
+                        <img src="<?php echo $merchandise['product_image']; ?>" alt="<?php echo $merchandise['sportsequipmentName']; ?>" class="product-image">
+                    </figure>
+                <?php endforeach; ?>
             </div>
 
-            <
+            
     </main>
 <?php include('footer.php'); ?>
 </body>

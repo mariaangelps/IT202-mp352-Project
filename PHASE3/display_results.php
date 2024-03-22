@@ -1,10 +1,10 @@
 
 <?php
-//Maria Angel Palacios
-//03/01/2024
-//IT202-006 --> Phase 2 Project 
-//mp352@njit.edu
-
+/*Maria Angel Palacios
+    03/21/2024
+    IT202-006 -> Phase 3 Project 
+    mp352@njit.edu 
+*/
   
 //company features
 
@@ -19,10 +19,6 @@ $product_price = filter_input(INPUT_POST,'product_price');
 $product_name = filter_input(INPUT_POST,'product_name');
 $product_code = filter_input(INPUT_POST,'product_code');
 $product_img = filter_input(INPUT_POST, 'product_img');
-
-
-
-
 
 //user information
 $first_name = filter_input(INPUT_POST,'first_name');
@@ -76,8 +72,6 @@ $shipping_companyf = "<br> <b> Company: </b> " . $shipping_company ;
 $product_pricef = "<br> <b> Total: </b> " . "$" . floatval($product_price);
 $product_namef = "<br> <b> Product Name : </b> " . ($product_name);
 $product_codef = "<br> <b> Code: </b> " .($product_code);
-
-
 ?>
 
 <html>
@@ -88,9 +82,7 @@ $product_codef = "<br> <b> Code: </b> " .($product_code);
 
 <body>
     <?php include ('header.php');?>
-   
     <main>
-        
         <span><?php echo $company_addressf;?><br> 852 3028 3732 </span>
 
             <h2> SHIP TO: </h2>
@@ -114,13 +106,8 @@ $product_codef = "<br> <b> Code: </b> " .($product_code);
             <span class = "name" ><?php echo $product_namef; ?></span>
             <br>
             <img src="<?php echo $product_img; ?>" class="img" alt="Product Image">
-            <img src="imagesPh2/barcode.jpg" class="barcode" alt="barcode">
-    
-            
+            <img src="imagesPh2/barcode.jpg" class="barcode" alt="barcode">      
     </main>
-
     <?php include ('footer.php');?>
- 
- 
 </body>
 </html>

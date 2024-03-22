@@ -1,8 +1,9 @@
 <?php
-//Maria Angel Palacios
-//03/01/2024
-//IT202-006 -> Phase 3 Project 
-//mp352@njit.edu 
+/*Maria Angel Palacios
+    03/21/2024
+    IT202-006 -> Phase 3 Project 
+    mp352@njit.edu 
+*/
 
 require_once('database_njit.php');
 include('header.php');
@@ -27,7 +28,7 @@ $statement1->closeCursor();
 <html>
 <head>
     <title> MPCatalog </title>
-    <link rel="stylesheet" href="merchandise.css" />
+    <link rel="stylesheet" href="create.css"/>
 </head>
 
 <body>

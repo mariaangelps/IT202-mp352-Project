@@ -1,0 +1,39 @@
+/*Maria Angel Palacios
+    03/21/2024
+    IT202-006 -> Phase 3 Project 
+    mp352@njit.edu 
+*/
+
+table, th, td {
+    border: 3px dashed white;
+    margin: 0; 
+    padding: 4; 
+    
+}
+
+
+body{
+    background-image: url("imagesPh3/empty-shopping-basket-online-shopping-concept-pink-background-3d-rendering.jpg");
+    background-size: 1400px; /* Adjust as needed */
+    background-position: center ; /* Add this line */
+    font-family: 'Courier New', Courier, monospace;
+    color: #23354e;
+    font-size: 5px;
+
+}
+
+header{
+    padding: 4px; 
+    text-align: center; 
+    margin-top:20;
+}
+
+footer {
+    padding: 0px;
+    position:relative; 
+    margin-left: 0px;
+}
+
+
+
+

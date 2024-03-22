@@ -1,6 +1,6 @@
-<!--//Maria Angel Palacios
-    02/16/2024
-    IT202-006 -> Phase 1 Project 
+<!--Maria Angel Palacios
+    03/21/2024
+    IT202-006 -> Phase 3 Project 
     mp352@njit.edu 
   -->
 
@@ -34,7 +34,8 @@
 </style>
 
 <footer>
-  <p>&copy; <?php echo date("D L F Y"); ?> MP Kicks, Inc.</p>
+<p>&copy; <?php echo date("D j F Y") . " MP Kicks, Inc."; ?></p>
+
     <h5>
         <nav>
             <a href="feedback.php"> Site Feedback  </a> ||

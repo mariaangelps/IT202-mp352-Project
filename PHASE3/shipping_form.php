@@ -1,8 +1,9 @@
 <?php
-//Maria Angel Palacios
-//03/01/2024
-//IT202-006 -> Phase 2 Project 
-//mp352@njit.edu 
+/*Maria Angel Palacios
+    03/21/2024
+    IT202-006 -> Phase 3 Project 
+    mp352@njit.edu 
+*/
 
 // Check if it exists, otherwise create it
 if(!isset($shipping_date)){
@@ -59,10 +60,10 @@ $product_img= isset($_POST['product_img']) ? $_POST['product_img'] : '';
   <h3>Check out <h3>
   <?php
   //Display the error message if it's not empty
-  if (!empty($error_message)) {
-    echo "<div style='color: red;'>$error_message</div>";
-  }
-  ?>
+    if (!empty($error_message)) {
+      echo "<div style='color: red;'>$error_message</div>";
+    }
+?>
 
 
   <main>
@@ -80,17 +81,13 @@ $product_img= isset($_POST['product_img']) ? $_POST['product_img'] : '';
         <label for = "UPS" > UPS </label>
         <input type="radio"  id= "FedEx" name="shipping_company" value="FedEx">
         <label for = "FedEx" > FedEx </label>
-    <br>
-
-        
+        <br>
 
       <label>Shipping Class:</label>
         <input type="radio" id= "Next Day Air" name= "shipping_class" value="Next Day Air" >
         <label for = "Next Day Air" > Next Day Air </label>
         <input type="radio" id= "Priority Mail" name= "shipping_class" value="Priority Mail" >
         <label for = "Priority Mail" >Priority Mail</label>
-        
-        
         <br>
 
       <label>Package Dimension:</label>
@@ -98,8 +95,8 @@ $product_img= isset($_POST['product_img']) ? $_POST['product_img'] : '';
         <br>
 
       <label>Product Name:</label>
-          <input type="text" name="product_name" value="<?php echo htmlspecialchars($product_name); ?>" readonly>
-          <br>
+        <input type="text" name="product_name" value="<?php echo htmlspecialchars($product_name); ?>" readonly>
+        <br>
 
       <label>Product Price:</label>
         <input type="text" name="product_price" value="<?php echo htmlspecialchars($product_price); ?>" readonly>
@@ -108,6 +105,7 @@ $product_img= isset($_POST['product_img']) ? $_POST['product_img'] : '';
       <label>Product Code:</label>
         <input type="text" name="product_code" value="<?php echo htmlspecialchars($product_code); ?>" readonly>
         <br>
+        
       <label>Your Product:</label>
         <img src="<?php echo htmlspecialchars($product_img); ?>" alt="Product Image" >
         <input type="hidden" name="product_img" value="<?php echo $product_img; ?>">

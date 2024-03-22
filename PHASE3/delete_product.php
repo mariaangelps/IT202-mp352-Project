@@ -1,5 +1,10 @@
 <?php 
-//Slide 37
+/*Maria Angel Palacios
+    03/21/2024
+    IT202-006 -> Phase 3 Project 
+    mp352@njit.edu 
+*/
+
 //require once es para add los valores a esa base de datos 
 require_once('database_njit.php');
 $product_id = filter_input(INPUT_POST,'sportsequipmentID',FILTER_VALIDATE_INT);

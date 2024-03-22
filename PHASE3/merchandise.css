@@ -12,12 +12,15 @@ table, th, td {
 }
 
 
-body{
-    background-color: #fff6f6;
-    font-family: 'Courier New', Courier, monospace;
-    color: #132743;
 
+body{
+    background-color:#f7e8f6;
+    background-size: 1400px; /* Adjust as needed */
+    background-position: center ; /* Add this line */
+    font-family: 'Courier New', Courier, monospace;
+    color: #23354e;
 }
+
 
 header{
     padding: 4px; 
@@ -34,13 +37,14 @@ footer {
 .product-image{
     width: 150px;
     height: auto;
-    border: 5px solid black;
+    border: 5px solid rgb(22, 33, 59);
     border-radius: 10px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 figcaption {
    
     font-weight: bold;
+    color: #1b2a3f;
 }
 .product-container {
     display: flex;
