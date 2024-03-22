@@ -30,18 +30,17 @@
     $result = $statement->fetch(PDO::FETCH_ASSOC);
     $duplicate_count = (int) $result['duplicate_count'];
 
-    if ($duplicate_count > 0  && $price >= 1000) {
-        $error_message = "Duplicate product code found. Please use a unique product code. <p><b> Recall that Price cannot be greater than 1000";
-    } elseif ($category_id == null || $code == null || 
-        $name == null || $description == null || $price == null || $size == null ) {
-        $error_message = "Invalid product data. Check all fields and try again.";
-    } 
-    else if ($price >= 1000){
-        $error_message = "<p><b> Recall that Price cannot be greater than 1000";
+    // Display the error message with the appropriate CSS class
+    if ($duplicate_count > 0 && $price >= 1000) {
+        echo "<p class='error-message'>Duplicate product code found. Please use a unique product code. Recall that Price cannot be greater than 1000</p>";
+    } elseif ($category_id == null || $code == null || $name == null || $description == null || $price == null || $size == null ) {
+        echo "<p class='error-message'>Invalid product data. Check all fields and try again.</p>";
+    } elseif ($price >= 1000) {
+        echo "<p class='error-message'>Recall that Price cannot be greater than 1000</p>";
+    } elseif ($duplicate_count > 0) {
+        echo "<p class='error-message'>Duplicate product code found. Please use a unique product code.</p>";
     }
-    else if($duplicate_count > 0){
-        $error_message = "Duplicate product code found. Please use a unique product code.";
-    }
+
         else {
             // SQL query for data insertion
             $query = 'INSERT INTO sportsequipment (sportsequipmentCategoryID, sportsequipmentCode, 

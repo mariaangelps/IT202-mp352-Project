@@ -34,6 +34,13 @@ footer {
     margin-left: 0px;
 }
 
+.error-message {
+    font-size: 18px; /* Adjust the font size as needed */
+    color: rgb(71, 26, 75); /* Adjust the color as needed */
+    margin: 10px 0; /* Add some margin for spacing */
+}
+
+
 
 
 

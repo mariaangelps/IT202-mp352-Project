@@ -9,6 +9,7 @@ header{
     text-align: left; 
     margin-top:0;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
 }
 
 
