@@ -20,7 +20,7 @@ $username = 'mp352';
     }
     //prepare pass to $query
     return $db;
-}
+    }
 ?>
 
 

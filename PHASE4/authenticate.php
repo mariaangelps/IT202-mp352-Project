@@ -1,25 +1,28 @@
-<?php
+<?php 
 require_once('managers.php');
+require_once('database_njit.php');
 session_start();
-// Retrieve input data from POST request
+
 $emailAddress = filter_input(INPUT_POST, 'emailAddress');
 $password = filter_input(INPUT_POST, 'password');
 $firstName = filter_input(INPUT_POST, 'firstName');
 $lastName = filter_input(INPUT_POST, 'lastName');
 
-if (addsportsequipmentmanager($emailAddress, $password, $firstName, $lastName,$dateCreated)) {
-    $_SESSION['valid_credentials'] = true;
-    echo "<p>Logged in</p>";
+echo "<p>$emailAddress</p>";
 
-    // Redirect the user to another page
-    // Example: header('Location: dashboard.php');
+if (is_valid_admin_login($db, $emailAddress, $password)) {
+  echo "si funciona";
+    $manager_details = managers_credentials($db, $emailAddress);
+    $_SESSION['valid_credentials'] = true;
+    $_SESSION['managers_credentials'] = $manager_details;
+
+    echo "<p>You have successfully logged in.</p>";
 } else {
-    if ($emailAddress==NULL&& $password==NULL && $firstName ==NULL&& $lastName==NULL) {
-        $login_error = "You must log in to view your products";
+    if ($emailAddress == NULL && $password == NULL) {
+        $login_message = 'You must login to view this page.';
     } else {
-        $login_error = "Invalid Credentials";
+        $login_message = 'Invalid credentials.';
     }
     include('login.php');
 }
-
 ?>
