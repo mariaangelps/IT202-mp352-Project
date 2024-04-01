@@ -1,11 +1,11 @@
 <?php 
-include('header.php');
-// Check if the login message is set, otherwise set a default value 
-if (!isset($login_message)) {
-    $login_message = "You must login to view this page";
-}
+    include('header.php');
+    // Check if the login message is set, otherwise set a default value 
+    if (!isset($login_error)) {
+        $login_error = "You must login to view this page";
+    }
 ?>
-
+<!DOCTYPE html>
 <html>
     <head>
         <title>Log In credentials</title>
@@ -32,8 +32,8 @@ if (!isset($login_message)) {
                 <input type="submit" value="Login" />
             </form>
 
-            <!-- Display login message -->
-            <p><?php echo $login_message; ?></p>
+        
+            <p><?php echo $login_error;?></p>
         </main>
     </body>
 </html>
