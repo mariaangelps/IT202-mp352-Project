@@ -5,8 +5,6 @@ if(!isset($login_message)){
 
     ?>
 
-
-<!DOCTYPE html>
 <html>
 <head>
     <title> MP KICKS STORE </title>
