@@ -1,6 +1,7 @@
 <?php 
     session_start();
-    if(isset($_SESSION['is_valid_admin'])) { ?>
+    if(isset($_SESSION['is_valid_admin'])) { 
+        ?>
         <header>
             <h3>
                 <nav>
@@ -8,6 +9,7 @@
                     <a href="logout.php">Logout</a> ||
                     <a href="create.php">Our Products</a> ||
                     <a href="shipping_form.php">Delivery</a> 
+
                 </nav>
             </h3>
         </header>
@@ -24,6 +26,7 @@
     </header>
     <?php } 
      include ('footer.php');?>
+     
 <html>
 <head>
     <title>Login/Logout</title>

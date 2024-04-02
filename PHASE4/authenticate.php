@@ -1,7 +1,6 @@
 <?php
 
 require_once('managers.php');
-
 session_start();
 
 
