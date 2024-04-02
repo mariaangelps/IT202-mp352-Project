@@ -4,7 +4,7 @@
     IT202-006 -> Phase 3 Project 
     mp352@njit.edu 
 */
-include('header.php');
+include('menu.php');
 
 //require once is to add values to the database
 require_once('database_njit.php');

@@ -7,7 +7,7 @@
 */
   
 //company features
-
+include('menu.php');
 $error_message  ='';
 $shipping_class = filter_input(INPUT_POST, 'shipping_class');
 $shipping_company = filter_input(INPUT_POST, 'shipping_company');

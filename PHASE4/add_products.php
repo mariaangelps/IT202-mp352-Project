@@ -5,8 +5,11 @@
     IT202-006 -> Phase 3 Project 
     mp352@njit.edu 
 */
-    include('header.php');
-
+    require_once('database_njit.php');
+    $db = getDB();
+    include('menu.php');
+    //error_reporting(E_ALL);
+    //ini_set('display_errors', 1);
     // Receive data from the form
     $error_message  ='';
     $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
@@ -16,6 +19,7 @@
     $price = filter_input(INPUT_POST, 'product_price', FILTER_VALIDATE_FLOAT);
     $size = filter_input(INPUT_POST, 'size');
     $product_image = ""; // Initialize product_image variable
+    
 
     // Check if product_image is set in $_POST
     if(isset($_POST['product_image'])){

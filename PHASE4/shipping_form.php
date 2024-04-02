@@ -54,7 +54,7 @@ $product_img= isset($_POST['product_img']) ? $_POST['product_img'] : '';
 <head>
     <title>MY SHIPPING ORDER DETAILS:</title>
     <link rel="stylesheet" href="style_shipping.css"/>
-    <?php include ('header.php');?>
+    <?php include('menu.php');?>
 </head>
 <body>
   <h3>Check out <h3>

@@ -1,4 +1,4 @@
-<?php include ('header.php');
+<?php include ('menu.php');
 /*Maria Angel Palacios
     03/21/2024
     IT202-006 -> Phase 3 Project 
@@ -10,7 +10,7 @@
     body{
     margin: 0;
     padding: 0; 
-    background-image: url('imagesPh2/home.png');
+    background-image: url('imagesPh3/actualizadahome.jpg.png');
     padding-left: 25px;
     background-color: #F3CBCC;
     background-size: 100%; 

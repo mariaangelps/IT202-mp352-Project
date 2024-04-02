@@ -6,7 +6,8 @@
 */
 
 require_once('database_njit.php');
-include('header.php');
+$db = getDB();
+include('menu.php');
 
 ///Get category ID
 $sportsequipmentCategoryID = filter_input(INPUT_GET, 'sportsequipmentCategoryID', FILTER_VALIDATE_INT);

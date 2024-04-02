@@ -4,11 +4,8 @@
     IT202-006 -> Phase 3 Project 
     mp352@njit.edu 
 */
-
 require_once('database_njit.php');
-include('header.php');
-
-
+$db = getDB();
   
 //Display the error message if it's not empty
   if (!empty($error_message)) {

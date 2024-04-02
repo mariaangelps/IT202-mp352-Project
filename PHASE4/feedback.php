@@ -13,7 +13,7 @@ if (!isset($improvements)) {
 <html>
 <head>
     <title> Thank you for your feedback </title>
-    <?php include('header.php')?>
+    <?php include('menu.php');?>
 </head>
     
 <body>

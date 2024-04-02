@@ -10,7 +10,7 @@ if (is_valid_admin_login($emailAddress, $password)) {
     $manager_details = managers_credentials($emailAddress);
     if ($manager_details) {
         $_SESSION['is_valid_admin'] = true;
-        include('menu.php');
+        include('home.php');
         // Output welcome message using manager details
         echo "<br>";
         echo "<h3><br>Welcome, " . $manager_details['firstName'] . " " . $manager_details['lastName'] ."<br>" . $manager_details['emailAddress'] . "!<br> </h3>";
