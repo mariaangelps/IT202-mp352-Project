@@ -13,21 +13,41 @@ if(!isset($login_message)){
     <main>
     <h3> Log in </h3>
     <form action="authenticate.php" method="post">
-        <label> Email : </label>
-        <input type = "text" name="emailAddress" value="">
+        <h3> Please Enter your Manager's credentials </h3>
+        
+        <input type = "text" name="emailAddress" placeholder= " Email" class="input-field" value="">
+        <br> 
+       
+        <input type="password" name="password" placeholder="Password" class="input-field" value="">
         <br>
-        <label> Password </label>
-        <input type="password" name="password" value="">
+        
+        <input type="text" name="firstName" placeholder="First Name" class="input-field" value="">
         <br>
-        <label> First Name </label>
-        <input type="text" name="firstName" value="">
-        <br>
-        <label> Last Name </label>
-        <input type="text" name="lastName" value="">
+        
+        <input type="text" name="lastName" placeholder="Last Name " class="input-field"value="">
         <br>
         <input type="submit" value="Login">
     </form>
     <p> <?php echo $login_message;?></p>
     </main>
 </body>
+<style>
+    body {
+            background-image: url('phase4img/flat-lay-arrangement-with-gadgets-copy-space.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 10;
+            padding: 10;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 25px;
+        } 
+        .input-field {
+            width: 30%;
+            padding: 8px;
+            border: 1px solid black;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 12px;
+            }
+</style>
 </html>
