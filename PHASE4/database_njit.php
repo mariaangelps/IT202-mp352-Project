@@ -11,7 +11,6 @@ $username = 'mp352';
     $password = 'Holamari1234$';
     try{
         $db = new PDO($dsn,$username,$password);
-        echo '<p> You are connected to your NJIT database! </p>';
     } catch(PDOException $ex){
         $error_message = $ex->getMessage(); //calling the object
         include('database_error.php');
