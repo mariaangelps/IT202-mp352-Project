@@ -13,9 +13,11 @@ if (is_valid_admin_login($emailAddress, $password)) {
         // Output welcome message using manager details
         echo "Welcome, " . $manager_details['firstName'] . "!<br>";
         echo "<p>You have successfully logged in.</p>";
+        include('menu.php');
     } else {
         //credentials not found
         echo "Credentials not found!";
+        
         
     }
 } else {

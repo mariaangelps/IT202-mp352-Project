@@ -8,11 +8,11 @@
             if(isset($_SESSION['valid_credentials'])){
                 ?>
                 <p>
-                    <a href="logout.php">Logout</a>
+                    <a href="login.php">Login</a>
                 </p>
                 <?php } else{?>
                     <p>
-                        <a href="login.php">Login</a>
+                        <a href="logout.php">Logout</a>
                     </p>
                         <?php } ?>
     </body>
