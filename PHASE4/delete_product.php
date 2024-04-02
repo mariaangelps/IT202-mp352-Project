@@ -4,10 +4,12 @@
     IT202-006 -> Phase 3 Project 
     mp352@njit.edu 
 */
-include('menu.php');
+
 
 //require once is to add values to the database
 require_once('database_njit.php');
+$db = getDB();
+include('menu.php');
 $product_id = filter_input(INPUT_POST,'sportsequipmentID',FILTER_VALIDATE_INT);
 $category_id = filter_input(INPUT_POST,'sportsequipmentCategoryID',FILTER_VALIDATE_INT);
 
@@ -22,7 +24,7 @@ if($product_id!=FALSE && $category_id!=FALSE){
     echo "<p> Item deleted! ";
 
 }
-include('footer.php');
+
 ?>
 <html>
     <head>

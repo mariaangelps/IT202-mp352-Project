@@ -108,6 +108,7 @@ $product_codef = "<br> <b> Code: </b> " .($product_code);
             <img src="<?php echo $product_img; ?>" class="img" alt="Product Image">
             <img src="imagesPh2/barcode.jpg" class="barcode" alt="barcode">      
     </main>
-    <?php include ('footer.php');?>
+    
 </body>
 </html>
+<?php include ('footer.php');?>   

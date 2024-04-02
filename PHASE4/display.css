@@ -32,13 +32,12 @@ footer {
 
 main {
     position: relative;
-    border: 5px dashed; 
+    border: 5px dashed #000; /* Set border color to black (#000) */
     width: 400px;
     margin: 20px auto; 
     padding: 8px;
     color:black;
     margin-left: 0px;
-    
 }
 
  .value{

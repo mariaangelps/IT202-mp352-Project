@@ -4,6 +4,7 @@
     IT202-006 -> Phase 3 Project 
     mp352@njit.edu 
 */
+include('menu.php');
 
 // Check if it exists, otherwise create it
 if(!isset($shipping_date)){
@@ -54,10 +55,8 @@ $product_img= isset($_POST['product_img']) ? $_POST['product_img'] : '';
 <head>
     <title>MY SHIPPING ORDER DETAILS:</title>
     <link rel="stylesheet" href="style_shipping.css"/>
-    <?php include('menu.php');?>
 </head>
 <body>
-  <h3>Check out <h3>
   <?php
   //Display the error message if it's not empty
     if (!empty($error_message)) {
@@ -67,6 +66,7 @@ $product_img= isset($_POST['product_img']) ? $_POST['product_img'] : '';
 
 
   <main>
+     <h3>Check out </h3>
     <form action="display_results.php" method="post">
   
       <label>Shipping Date:</label>
@@ -197,10 +197,10 @@ $product_img= isset($_POST['product_img']) ? $_POST['product_img'] : '';
 
         <input type="submit" value="Send">
     </form>
+ 
   </main>
   
 </body>
-<h6><?php include ('footer.php');?></h6>
 </html>
 
    

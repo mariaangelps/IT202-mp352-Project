@@ -28,7 +28,7 @@
 <style>
     body {
             margin: 0;
-            padding: 20px 0 0 25px; /* Adding top padding */
+            padding: 10px 0 0 25px; /* Adding top padding */
             background-color: #F3CBCC;
             background-size: 100%;
             background-repeat: no-repeat;
