@@ -1,8 +1,10 @@
 <?php 
-
+include('menu.php');
 if(!isset($login_message)){
     $login_message='You must login to view this page';}
+
     ?>
+
 
 <!DOCTYPE html>
 <html>

@@ -4,8 +4,12 @@
     IT202-006 -> Phase 3 Project 
     mp352@njit.edu 
 */
-include('menu.php');
 
+
+require_once('database_njit.php');
+session_start();
+$db = getDB();
+include('menu.php');
 // Check if it exists, otherwise create it
 if(!isset($shipping_date)){
   $shipping_date='';
@@ -42,6 +46,18 @@ if(!isset($city)){
 }
 if(!isset($zip_code)){
   $zip_code='';
+}
+
+// Check if the session has been started
+if (!isset($_SESSION['is_valid_admin']) || !$_SESSION['is_valid_admin']) {
+    // Set an error message indicating the user needs to be logged in
+    $error_message = "You must be logged in to access this page.";
+}
+
+// Redirect to login if the user is not logged in 
+if (!isset($_SESSION['is_valid_admin']) || !$_SESSION['is_valid_admin']) {
+    header('Location: login.php');
+    exit; 
 }
 
 $product_price = isset($_POST['product_price']) ? $_POST['product_price'] : '';

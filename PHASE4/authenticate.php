@@ -1,7 +1,9 @@
 <?php
 
 require_once('managers.php');
+
 session_start();
+
 
 $emailAddress = filter_input(INPUT_POST, 'emailAddress');
 $password = filter_input(INPUT_POST, 'password');

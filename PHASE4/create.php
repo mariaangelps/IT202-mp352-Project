@@ -5,8 +5,22 @@
     mp352@njit.edu 
 */
 require_once('database_njit.php');
+session_start();
 $db = getDB();
-  
+include('menu.php');
+
+// Check if the user is not logged in
+if (!isset($_SESSION['is_valid_admin']) || !$_SESSION['is_valid_admin']) {
+    // Set an error message indicating the user needs to be logged in
+    $error_message = "You must be logged in to access this page.";
+}
+
+// Redirect to login page if not logged in
+if (!isset($_SESSION['is_valid_admin']) || !$_SESSION['is_valid_admin']) {
+    header('Location: login.php');
+    exit; // Stop further execution
+}
+
 //Display the error message if it's not empty
   if (!empty($error_message)) {
     echo "<div style='color: red;'>$error_message</div>";
