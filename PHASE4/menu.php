@@ -20,7 +20,8 @@
                 <a href="home.php">Home</a> ||
                 <a href="login.php">Login</a> ||
                 <a href="product_page2.php">Product List</a> ||
-                <a href="shipping_form.php">Delivery</a> 
+                <a href="create.php">Create</a> ||
+                <a href="shipping_form.php">Shipping</a> 
             </nav>
         </h3>
     </header>
