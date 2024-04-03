@@ -2,6 +2,9 @@
 
 require_once('database_njit.php');
 
+
+
+
 function is_valid_admin_login($emailAddress, $password) {
     $db = getDB();
     $query = 'SELECT password FROM sportsequipmentManagers WHERE emailAddress = :emailAddress';

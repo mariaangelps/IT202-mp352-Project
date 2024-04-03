@@ -1,4 +1,12 @@
+<?php 
 
+require_once('database_njit.php');
+session_start();
+require_once('managers.php');
+$db = getDB();
+
+
+?>
 <html>
 <head>
     <title>MP KICKS</title>
@@ -12,6 +20,7 @@
             background-position: center; /* Centers the background image */
             margin-bottom: 0;
             font-family: 'Courier New', Courier, monospace;
+        }
         main {
             padding-left: 25px; /* Moved padding from body to main if needed */
         }
@@ -20,7 +29,8 @@
 </head>
 <body>
     <main>
-        <?php include('menu.php'); ?>
+        <?php include('menu.php');
+              include('welcome.php'); ?> 
         <!-- Your main content goes here -->
     </main>
     <?php include('footer.php'); ?>

@@ -6,11 +6,8 @@
 */
 
 require_once('database_njit.php');
-session_start();
-require_once('managers.php');
 $db = getDB();
 include('menu.php');
-include('welcome.php');
 
 ///Get category ID
 $sportsequipmentCategoryID = filter_input(INPUT_GET, 'sportsequipmentCategoryID', FILTER_VALIDATE_INT);
@@ -63,7 +60,6 @@ $statement2->closeCursor();?>
             <th>Price</th>
             <th> Date </th>
             <th>Action</th>
-            <th>Delete</th>
     
         </tr>
         <?php foreach($products as $merchandise):?>
@@ -81,16 +77,10 @@ $statement2->closeCursor();?>
                     <input type="hidden" name="product_price" value="<?php echo $merchandise['price']; ?>">
                     <input type="hidden" name="product_code" value="<?php echo $merchandise['sportsequipmentCode']; ?>">
                     <input type="hidden" name="product_img" value="<?php echo $merchandise['product_image']; ?>">
-                    <input type="submit" value="Proceed to the shipping form">
+                    <input type="submit" value="log in to proceed to the shipping form">
                 </form>
             </td>
-            <td>
-                <form action="delete_product.php" method="post">
-                    <input type="hidden" name="sportsequipmentID" value="<?php echo $merchandise['sportsequipmentID']; ?>" />
-                    <input type="hidden" name="sportsequipmentCategoryID" value="<?php echo $merchandise['sportsequipmentCategoryID']; ?>" />
-                    <input type="submit" value="Delete" />
-                </form>
-            </td>
+            
         </tr>
         <?php endforeach; ?>
         </table>

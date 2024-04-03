@@ -7,7 +7,7 @@
                 <nav>
                     <a href="home.php">Home</a> ||
                     <a href="logout.php">Logout</a> ||
-                    <a href="create.php">Our Products</a> ||
+                    <a href="create.php">Create</a> ||
                     <a href="shipping_form.php">Delivery</a> 
 
                 </nav>
@@ -19,7 +19,7 @@
             <nav>
                 <a href="home.php">Home</a> ||
                 <a href="login.php">Login</a> ||
-                <a href="create.php">Our Products</a> ||
+                <a href="product_page2.php">Product List</a> ||
                 <a href="shipping_form.php">Delivery</a> 
             </nav>
         </h3>

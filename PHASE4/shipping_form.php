@@ -6,9 +6,12 @@
 */
 
 require_once('database_njit.php');
+
 session_start();
+require_once('managers.php');
 $db = getDB();
 include('menu.php');
+include('welcome.php');
 // Check if it exists, otherwise create it
 if(!isset($shipping_date)){
   $shipping_date='';

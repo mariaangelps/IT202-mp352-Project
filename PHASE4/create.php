@@ -6,10 +6,12 @@
 */
 require_once('database_njit.php');
 session_start();
+require_once('managers.php');
 $db = getDB();
 include('menu.php');
+include('welcome.php');
 
-// Check if the user is not logged in
+//Check if the user is not logged in
 if (!isset($_SESSION['is_valid_admin']) || !$_SESSION['is_valid_admin']) {
     // Set an error message indicating the user needs to be logged in
     $error_message = "You must be logged in to access this page.";
@@ -20,6 +22,8 @@ if (!isset($_SESSION['is_valid_admin']) || !$_SESSION['is_valid_admin']) {
     header('Location: login.php');
     exit; // Stop further execution
 }
+
+
 
 //Display the error message if it's not empty
   if (!empty($error_message)) {
@@ -77,6 +81,7 @@ $statement1->closeCursor();
                 <input type="submit" value="Add Product"><br>
 
         </form>
+
     <p><a href="product_page.php">View Product List</a></p>
 </main>
 <?php include('footer.php'); ?>

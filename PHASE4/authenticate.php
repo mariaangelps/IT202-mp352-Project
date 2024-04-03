@@ -11,6 +11,9 @@ if (is_valid_admin_login($emailAddress, $password)) {
     $manager_details = managers_credentials($emailAddress);
     if ($manager_details) {
         $_SESSION['is_valid_admin'] = true;
+        $_SESSION['emailAddress'] = $emailAddress;
+        $_SESSION['firstName'] = $firstName;
+        $_SESSION['lastName'] = $lastName;
         include('home.php');
         // Output welcome message using manager details
         echo "<br>";
@@ -20,7 +23,6 @@ if (is_valid_admin_login($emailAddress, $password)) {
     } else {
         //credentials not found
         echo "Credentials not found!";
-        
         
     }
 } else {

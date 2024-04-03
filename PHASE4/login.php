@@ -21,10 +21,6 @@ if(!isset($login_message)){
         <input type="password" name="password" placeholder="Password" class="input-field" value="">
         <br>
         
-        <input type="text" name="firstName" placeholder="First Name" class="input-field" value="">
-        <br>
-        
-        <input type="text" name="lastName" placeholder="Last Name " class="input-field"value="">
         <br>
         <input type="submit" value="Login">
     </form>
