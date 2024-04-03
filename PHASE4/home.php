@@ -1,5 +1,9 @@
 <?php 
-
+/*Maria Angel Palacios
+    04/04/2024
+    IT202-006 -> Phase 4 Project 
+    mp352@njit.edu 
+*/
 require_once('database_njit.php');
 session_start();
 require_once('managers.php');
@@ -16,22 +20,22 @@ $db = getDB();
             padding: 0; 
             background-image: url('imagesPh3/actualizadahome.jpg.png');
             background-color: #F3CBCC;
-            background-size: cover; /* Ensures the background image covers the entire screen */
-            background-position: center; /* Centers the background image */
+            background-size: cover; 
+            background-position: center; 
             margin-bottom: 0;
             font-family: 'Courier New', Courier, monospace;
         }
         main {
-            padding-left: 25px; /* Moved padding from body to main if needed */
+            padding-left: 25px; 
         }
-        /* Additional styling can go here */
+        
     </style>
 </head>
 <body>
     <main>
         <?php include('menu.php');
               include('welcome.php'); ?> 
-        <!-- Your main content goes here -->
+   
     </main>
     <?php include('footer.php'); ?>
 </body>

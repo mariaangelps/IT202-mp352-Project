@@ -1,6 +1,6 @@
 /*Maria Angel Palacios
-    03/21/2024
-    IT202-006 -> Phase 3 Project 
+    04/04/2024
+    IT202-006 -> Phase 4 Project 
     mp352@njit.edu 
 */
 body {
@@ -32,7 +32,7 @@ footer {
 
 main {
     position: relative;
-    border: 5px dashed #000; /* Set border color to black (#000) */
+    border: 5px dashed #000; 
     width: 400px;
     margin: 20px auto; 
     padding: 8px;

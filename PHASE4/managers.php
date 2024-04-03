@@ -1,9 +1,10 @@
 <?php
-
+/*Maria Angel Palacios
+    04/04/2024
+    IT202-006 -> Phase 4 Project 
+    mp352@njit.edu 
+*/
 require_once('database_njit.php');
-
-
-
 
 function is_valid_admin_login($emailAddress, $password) {
     $db = getDB();

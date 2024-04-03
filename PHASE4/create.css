@@ -1,9 +1,8 @@
 /*Maria Angel Palacios
-    03/21/2024
-    IT202-006 -> Phase 3 Project 
+    04/04/2024
+    IT202-006 -> Phase 4 Project 
     mp352@njit.edu 
 */
-
 table, th, td {
     border: 3px dashed white;
     margin: 0; 
@@ -13,8 +12,8 @@ table, th, td {
 
 body{
     background-image: url("imagesPh3/rose-gold-cylinder-shape-podium-minimal-product-display-pedestal-background-3d-rendering.jpg");
-    background-size: 1450px; /* Adjust as needed */
-    background-position: center ; /* Add this line */
+    background-size: 1450px; 
+    background-position: center ; 
     font-family: 'Courier New', Courier, monospace;
     color: #23354e;
 }
@@ -46,8 +45,8 @@ figcaption {
 .product-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Align items horizontally */
-    gap: 20px; /* Adjust the space between items */
+    justify-content: center; 
+    gap: 20px;
     text-align: center;
 }
 

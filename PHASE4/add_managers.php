@@ -1,5 +1,9 @@
 <?php
-
+/*Maria Angel Palacios
+    04/04/2024
+    IT202-006 -> Phase 4 Project 
+    mp352@njit.edu 
+*/
 require_once('database_njit.php');
 
 function addsportsequipmentmanager($sportsequipmentManagerID,$emailAddress, $password, $firstName, $lastName, $dateCreated) {
