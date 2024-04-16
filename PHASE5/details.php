@@ -5,28 +5,31 @@
     mp352@njit.edu 
 */
 require_once('database_njit.php');
-
 session_start();
 require_once('managers.php');
 $db = getDB();
-include('menu.php');
-include('welcome.php');
+$product_id = $_GET['product_id'];
 
+$query = "SELECT * FROM sportsequipment WHERE sportsequipmentID = :product_id";
+$statement = $db->prepare($query);
+$statement->bindValue(':product_id', $product_id);
+$statement->execute();
+$product = $statement->fetch();
+$statement->closeCursor();
+?>
 
-// Check if the session has been started
-if (!isset($_SESSION['is_valid_admin']) || !$_SESSION['is_valid_admin']) {
-    // Set an error message indicating the user needs to be logged in
-    $error_message = "You must be logged in to access this page.";
-}
-
-// Redirect to login if the user is not logged in 
-if (!isset($_SESSION['is_valid_admin']) || !$_SESSION['is_valid_admin']) {
-    header('Location: login.php');
-    exit; 
-}
-
-$product_price = isset($_GET['product_price']) ? $_GET['product_price'] : '';
-$product_name = isset($_GET['product_name']) ? $_GET'product_name'] : '';
-$product_code = isset($_GET['product_code']) ? $_GET['product_code'] : '';
-$product_img= isset($_GET['product_img']) ?$_GET['product_img'] : '';
-?> 
+<html>
+<head>
+    <title>Product Details</title>
+</head>
+<body>
+    <h1>Product Details</h1>
+    <p>Name: <?php echo $product['sportsequipmentName']; ?></p>
+    <p>Code: <?php echo $product['sportsequipmentCode']; ?></p>
+    <p>Description: <?php echo $product['description']; ?></p>
+    <p>Size: <?php echo $product['Size']; ?></p>
+    <p>Price: <?php echo $product['price']; ?></p>
+    <p>Date Created: <?php echo $product['dateCreated']; ?></p>
+    <img src="<?php echo $product['product_image']; ?>" alt="Product Image">
+</body>
+</html>
