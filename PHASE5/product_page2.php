@@ -1,10 +1,9 @@
 <?php
 /*Maria Angel Palacios
-    04/04/2024
-    IT202-006 -> Phase 4 Project 
+    04/19/2024
+    IT202-006 -> Phase 5 Project 
     mp352@njit.edu 
 */
-
 require_once('database_njit.php');
 $db = getDB();
 include('menu.php');
@@ -65,11 +64,16 @@ $statement2->closeCursor();?>
         <?php foreach($products as $merchandise):?>
         <tr>
             <td><?php echo $merchandise['sportsequipmentName']; ?></td>
-            <td><?php echo $merchandise['sportsequipmentCode']; ?></td>
-            <td><?php echo $merchandise['description']; ?></td>
-            <td><?php echo $merchandise['Size']; ?></td>
-            <td><?php echo $merchandise['price']; ?></td>
-            <td><?php echo $merchandise['dateCreated'];?></td>
+                <td>
+                <a href="details.php?product_id=<?php echo $merchandise['sportsequipmentID']; ?>">
+                    <?php echo $merchandise['sportsequipmentCode']; ?>
+                </a>
+                </td>
+                <td><?php echo $merchandise['description']; ?></td>
+                <td><?php echo $merchandise['Size']; ?></td>
+                <td><?php echo $merchandise['price']; ?></td>
+                <td><?php echo $merchandise['dateCreated'];?></td>
+                
             
             <td> 
                 <form action="shipping_form.php" method="post" class="form1">
